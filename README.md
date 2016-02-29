@@ -5,7 +5,7 @@ This will be the repo for the Mark and Dan ideas/code gathering
 Ideas: 
 Search form questionnaire / profile
 Search results display: 
-Grid 
+Grid/Matrix 
 Compare
 Salary API
 Graph display of data
