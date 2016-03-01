@@ -470,112 +470,13 @@
         </div>
     </aside>
     
-    
+
 
     <section id="search-results" tabindex="0" data-keywords="" data-location="" data-distance="50" data-latitude="" data-longitude="" data-show-radius="False" data-total-results="52" data-total-pages="4" data-current-page="1" data-records-per-page="15" data-active-facet-id="0" data-facet-term="" data-facet-type="0" data-search-results-module-name="Search Results" data-sort-criteria="0" data-sort-direction="0" data-search-type="5" data-ajax-url="/search-jobs/results" data-server-error-message="There was an error retrieving your results. Please refresh and try again." data-keyword-type="" data-location-type="" data-location-path="" data-organization-ids="" data-selector-name="searchresults">
-        <h1 role="status">52 Results found</h1>
+        <h1 role="status" class="rsts">52 Results found</h1>
 
             <section id="search-results-list">
                 
-                <section id="applied-filters" class="search-results-options">
-                    <ul aria-labelledby="applied-filters-label" tabindex="0" role="presentation">
-                    </ul>
-                </section>
-
-
-                <ul>
-                        <li>
-                            <a href="/job/chicago/metrics-analyst-media-and-analytics/3401/1063623" data-job-id="1063623">
-                                <h2>Metrics Analyst – Media &amp; Analytics</h2>
-                                    <span class="job-location">Chicago, Illinois</span>
-                                                            </a>
-                        </li>
-                        <li>
-                            <a href="/job/glendale/account-director-digital-strategy-glendale-ca/3401/1063624" data-job-id="1063624">
-                                <h2>Account Director - Digital Strategy - Glendale, CA</h2>
-                                    <span class="job-location">Glendale, California</span>
-                                                            </a>
-                        </li>
-                        <li>
-                            <a href="/job/chicago/marketing-metrics-digital-advertising-intern/3401/1063625" data-job-id="1063625">
-                                <h2>Marketing Metrics- Digital Advertising  - Intern</h2>
-                                    <span class="job-location">Chicago, Illinois</span>
-                                                            </a>
-                        </li>
-                        <li>
-                            <a href="/job/milwaukee/accountant-milwaukee/3401/1063626" data-job-id="1063626">
-                                <h2>Accountant - Milwaukee</h2>
-                                    <span class="job-location">Milwaukee, Wisconsin</span>
-                                                            </a>
-                        </li>
-                        <li>
-                            <a href="/job/waltham/digital-strategist/3401/1063627" data-job-id="1063627">
-                                <h2>Digital Strategist</h2>
-                                    <span class="job-location">Waltham, Massachusetts</span>
-                                                            </a>
-                        </li>
-                        <li>
-                            <a href="/job/london/account-manager-digital-advertising/3401/1063629" data-job-id="1063629">
-                                <h2>Account Manager – Digital Advertising</h2>
-                                    <span class="job-location">London, England</span>
-                                                            </a>
-                        </li>
-                        <li>
-                            <a href="/job/milwaukee/financial-planning-and-analysis-fp-and-a-manager/3401/1063634" data-job-id="1063634">
-                                <h2>Financial Planning and Analysis (FP&amp;A) Manager</h2>
-                                    <span class="job-location">Milwaukee, Wisconsin</span>
-                                                            </a>
-                        </li>
-                        <li>
-                            <a href="/job/milwaukee/accounts-receivable-specialist-milwaukee/3401/1063636" data-job-id="1063636">
-                                <h2>Accounts Receivable Specialist - Milwaukee</h2>
-                                    <span class="job-location">Milwaukee, Wisconsin</span>
-                                                            </a>
-                        </li>
-                        <li>
-                            <a href="/job/chicago/digital-media-planner-strategist/3401/1063637" data-job-id="1063637">
-                                <h2>Digital Media Planner/Strategist</h2>
-                                    <span class="job-location">Chicago, Illinois</span>
-                                                            </a>
-                        </li>
-                        <li>
-                            <a href="/job/milwaukee/t-and-e-accountant-intern/3401/1063639" data-job-id="1063639">
-                                <h2>T&amp;E Accountant – Intern</h2>
-                                    <span class="job-location">Milwaukee, Wisconsin</span>
-                                                            </a>
-                        </li>
-                        <li>
-                            <a href="/job/singapore/digital-media-planner/3401/1063640" data-job-id="1063640">
-                                <h2>Digital Media Planner</h2>
-                                    <span class="job-location"> </span>
-                                                            </a>
-                        </li>
-                        <li>
-                            <a href="/job/new-york/digital-strategist/3401/1063643" data-job-id="1063643">
-                                <h2>Digital Strategist</h2>
-                                    <span class="job-location">New York, New York</span>
-                                                            </a>
-                        </li>
-                        <li>
-                            <a href="/job/london/account-executive-digital-advertising/3401/1063648" data-job-id="1063648">
-                                <h2>Account Executive – Digital Advertising</h2>
-                                    <span class="job-location">London, England</span>
-                                                            </a>
-                        </li>
-                        <li>
-                            <a href="/job/london/digital-designer/3401/1063651" data-job-id="1063651">
-                                <h2>Digital Designer</h2>
-                                    <span class="job-location">London, England</span>
-                                                            </a>
-                        </li>
-                        <li>
-                            <a href="/job/san-francisco/account-executive-digital-advertising/3401/1063653" data-job-id="1063653">
-                                <h2>Account Executive - Digital Advertising</h2>
-                                    <span class="job-location">San Francisco, California</span>
-                                                            </a>
-                        </li>
-                </ul>
-
             </section>
     </section>
 
@@ -634,13 +535,41 @@
     <script src="//tbcdn.talentbrew.com/bundles/form"></script>
 
     
-    
-    
+        <script>
+		$(document).ready(function() {
+			var container = $('<ul></ul>');
+			$.ajax({
+				type: "GET",
+				url: "/xml/tmp-feed.xml",
+				dataType: "xml",
+				success: function(xml){
+					var count = $(xml).find("VIPER_JOB").size();
+					$(xml).find('VIPER_JOB').each(function(){
+						var jobID = $(this).find("JDTID_UNIQUE_NUMBER").text();
+						var jobTitle = $(this).find("JOB_TITLE").text();
+						var jobDescription = $(this).find("TEXT").text();
+						var jobCategory = $(this).find("JOB_CATEGORY").text();
+						var jobQualifications = $(this).find("QUALIFICATIONS").text();
+						var City = $(this).find("JOB_LOCATION_CITY").text();
+						var State = $(this).find("JOB_LOCATION_STATE").text();
+						var Country = $(this).find("JOB_LOCATION_COUNTRY").text();
+						var JobZipCode = $(this).find("JOB_LOCATION_ZIP").text();
+						var StartDate = $(this).find("ASSIGNMENT_START_DATE").text();
 
-
-    
-    
-    <!-- Machine Name:  TMPBREWWEB04P -->
-
+						var lnk = $('<a></a>');
+						lnk
+						.attr('data-job-id', jobID)
+						.attr('href', 'job-details.html?id='+jobID)
+						.append('<h2>'+jobTitle+'</h2><span class="job-location">'+City+', '+State+'</span>')
+						.wrap('<li></li>');
+						container.append(lnk);
+					});
+					$("#search-results-list").append(container);
+					$("h1.rsts").html(count+" Results Found");
+				}
+			});
+		});
+		</script>
+   
 </body>
 </html>
