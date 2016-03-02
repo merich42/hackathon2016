@@ -555,20 +555,88 @@
 						var Country = $(this).find("JOB_LOCATION_COUNTRY").text();
 						var JobZipCode = $(this).find("JOB_LOCATION_ZIP").text();
 						var StartDate = $(this).find("ASSIGNMENT_START_DATE").text();
-
+						var chkbox = "<div class='compare'><label class='hide-text' for='"+jobID+"'>Select to compare "+jobTitle+"</label><input type='checkbox' id='"+jobID+"' /></div>";
 						var lnk = $('<a></a>');
 						lnk
 						.attr('data-job-id', jobID)
 						.attr('href', 'job-details.html?id='+jobID)
+						.addClass('list-item')
 						.append('<h2>'+jobTitle+'</h2><span class="job-location">'+City+', '+State+'</span>')
-						.wrap('<li></li>');
-						container.append(lnk);
+						var listitem = $("<li></li>");
+						listitem.append(chkbox);
+						listitem.append(lnk);
+						container.append(listitem);
 					});
 					$("#search-results-list").append(container);
-					$("h1.rsts").html(count+" Results Found");
+					//check to see if check boxes are selected, then show button, grey out more than 3
+					$('.compare input:checkbox').click(function(){
+						checkForThree();
+					});
+					var compareBtn = $("<a></a>");
+					
+					compareBtn
+					.attr('href', '/compare.html')
+					.addClass('hidden')
+					.html("Compare Selected Jobs")
+					.addClass('btn');
+					$('aside').append(compareBtn);
+					$("h1.rsts").html(count+" Results Found").after("<span class='head-compare'></span");
 				}
 			});
+			
+			
 		});
+		
+		function checkForThree(){
+			var count = $('.compare input:checkbox:checked').length;
+			if(count >= 3){
+				$(".compare input:checkbox:not(:checked)").attr("disabled", true);
+			} else {
+				$(".compare input:checkbox:not(:checked)").attr("disabled", false);
+			}
+			//show button for compare page
+			if(count > 1){
+				$('aside .btn').addClass('active');
+			} else {
+				$('aside .btn').removeClass('active');
+			}
+			//build url
+			var myUrl =  "compare.html";
+			$('.compare input:checkbox:checked').each(function(i){
+				if(i > 0){
+					myUrl =  $('aside .btn').attr('href');
+				}
+				var myJob = $(this).attr('id');
+				var myName = "job"+i;
+				console.log(addQSParm(myName, myJob, myUrl));
+				$('aside .btn').attr('href', addQSParm(myName, myJob, myUrl));
+			});
+			
+			
+		}
+		
+		function addQSParm(name, value, url) {
+			var myUrl = url;
+			var re = new RegExp("([?&]" + name + "=)[^&]+", "");
+
+			function add(sep) {
+				myUrl += sep + name + "=" + encodeURIComponent(value);
+			}
+
+			function change() {
+				myUrl = myUrl.replace(re, "$1" + encodeURIComponent(value));
+			}
+			if (myUrl.indexOf("?") === -1) {
+				add("?");
+			} else {
+				if (re.test(myUrl)) {
+					change();
+				} else {
+					add("&");
+				}
+			}
+			return myUrl;
+		}
 		</script>
    
 </body>

@@ -149,7 +149,119 @@
     
             <article>
 				<div class="page-content-container">
-					Content
+					<div class="flex">
+					<section>
+						<h1>Compare Jobs</h1>
+						<div>
+							<h2>Job 1</h2>
+							<a class="close" href="#"><span>Remove Job</span></a>
+						</div>
+						<div>
+							<h2>Job 2</h2>
+						</div>
+						<div>
+							<h2>Job 3</h2>
+						</div>
+					</section>
+					<section>
+						<h1>Average Salary</h1>
+						<div>
+							Salary for job 1
+						</div>
+						<div>
+							Salary for job 2
+						</div>
+						<div>
+							Salary for job 3
+						</div>
+					</section>
+					
+					<section>
+						<h1>Location</h1>
+						<div>
+							New York, NY
+						</div>
+						<div>
+							Washington, DC
+						</div>
+						<div>
+							Cleveland, OH
+						</div>
+					</section>
+					
+					<section>
+						<h1>Experiance</h1>
+						<div>
+							Experiance for job 1
+						</div>
+						<div>
+							Experiance for job 2
+						</div>
+						<div>
+							Experiance for job 3
+						</div>
+					</section>
+					
+					<section>
+						<h1>Requied Skills</h1>
+						<div>
+							Skills for job 1
+						</div>
+						<div>
+							Skills for job 2
+						</div>
+						<div>
+							Skills for job 3
+						</div>
+					</section>
+					<section>
+						<h1>Relocation Offered</h1>
+						<div>
+							yes
+						</div>
+						<div>
+							no
+						</div>
+						<div>
+							no
+						</div>
+					</section>
+					<section>
+						<h1>Job Contract Type</h1>
+						<div>
+							Full Time
+						</div>
+						<div>
+							Part Time
+						</div>
+						<div>
+							Contract-to-hire
+						</div>
+					</section>
+					<section>
+						<div>
+							<a href="#" class="job-apply">Apply Now</a>
+						</div> 
+						<div>
+							<a href="#" class="job-apply">Apply Now</a>
+						</div>
+						<div>
+							<a href="#" class="job-apply">Apply Now</a>
+						</div>
+					</section>
+					
+					<section>
+						<div>
+							<a href="#" >More Details</a>
+						</div> 
+						<div>
+							<a href="#" >More Details</a>
+						</div>
+						<div>
+							<a href="#" >More Details</a>
+						</div>
+					</section>
+					</div>
 				</div>
             </article>
     
@@ -199,7 +311,109 @@
     <script src="//tbcdn.talentbrew.com/company/3401/js/2221-Full.min.js"></script>
     <script src="//tbcdn.talentbrew.com/bundles/form"></script>
 
-    
+     <script>
+		$(document).ready(function() {
+			var container = $('<ul></ul>');
+			$.ajax({
+				type: "GET",
+				url: "/xml/tmp-feed.xml",
+				dataType: "xml",
+				success: function(xml){
+					var count = $(xml).find("VIPER_JOB").size();
+					$(xml).find('VIPER_JOB').each(function(){
+						var jobID = $(this).find("JDTID_UNIQUE_NUMBER").text();
+						var jobTitle = $(this).find("JOB_TITLE").text();
+						var jobDescription = $(this).find("TEXT").text();
+						var jobCategory = $(this).find("JOB_CATEGORY").text();
+						var jobQualifications = $(this).find("QUALIFICATIONS").text();
+						var City = $(this).find("JOB_LOCATION_CITY").text();
+						var State = $(this).find("JOB_LOCATION_STATE").text();
+						var Country = $(this).find("JOB_LOCATION_COUNTRY").text();
+						var JobZipCode = $(this).find("JOB_LOCATION_ZIP").text();
+						var StartDate = $(this).find("ASSIGNMENT_START_DATE").text();
+						var chkbox = "<div class='compare'><label class='hide-text' for='"+jobID+"'>Select to compare "+jobTitle+"</label><input type='checkbox' id='"+jobID+"' /></div>";
+						var lnk = $('<a></a>');
+						lnk
+						.attr('data-job-id', jobID)
+						.attr('href', 'job-details.html?id='+jobID)
+						.addClass('list-item')
+						.append('<h2>'+jobTitle+'</h2><span class="job-location">'+City+', '+State+'</span>')
+						var listitem = $("<li></li>");
+						listitem.append(chkbox);
+						listitem.append(lnk);
+						container.append(listitem);
+					});
+					$("#search-results-list").append(container);
+					//check to see if check boxes are selected, then show button, grey out more than 3
+					$('.compare input:checkbox').click(function(){
+						checkForThree();
+					});
+					var compareBtn = $("<a></a>");
+					
+					compareBtn
+					.attr('href', '/compare.html')
+					.addClass('hidden')
+					.html("Compare Selected Jobs")
+					.addClass('btn');
+					$('aside').append(compareBtn);
+					$("h1.rsts").html(count+" Results Found").after("<span class='head-compare'></span");
+				}
+			});
+			
+			
+		});
+		
+		function checkForThree(){
+			var count = $('.compare input:checkbox:checked').length;
+			if(count >= 3){
+				$(".compare input:checkbox:not(:checked)").attr("disabled", true);
+			} else {
+				$(".compare input:checkbox:not(:checked)").attr("disabled", false);
+			}
+			//show button for compare page
+			if(count > 1){
+				$('aside .btn').addClass('active');
+			} else {
+				$('aside .btn').removeClass('active');
+			}
+			//build url
+			var myUrl =  "compare.html";
+			$('.compare input:checkbox:checked').each(function(i){
+				if(i > 0){
+					myUrl =  $('aside .btn').attr('href');
+				}
+				var myJob = $(this).attr('id');
+				var myName = "job"+i;
+				console.log(addQSParm(myName, myJob, myUrl));
+				$('aside .btn').attr('href', addQSParm(myName, myJob, myUrl));
+			});
+			
+			
+		}
+		
+		function addQSParm(name, value, url) {
+			var myUrl = url;
+			var re = new RegExp("([?&]" + name + "=)[^&]+", "");
+
+			function add(sep) {
+				myUrl += sep + name + "=" + encodeURIComponent(value);
+			}
+
+			function change() {
+				myUrl = myUrl.replace(re, "$1" + encodeURIComponent(value));
+			}
+			if (myUrl.indexOf("?") === -1) {
+				add("?");
+			} else {
+				if (re.test(myUrl)) {
+					change();
+				} else {
+					add("&");
+				}
+			}
+			return myUrl;
+		}
+		</script>
     
     
 
