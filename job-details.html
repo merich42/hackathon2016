@@ -302,12 +302,14 @@
 							var jobDescription = $(this).find("TEXT").text();
 							var jobCategory = $(this).find("JOB_CATEGORY").text();
 							var jobQualifications = $(this).find("QUALIFICATIONS").text();
+							jobQualifications = jobQualifications.replace(" * ","</li><li>");
+							jobQualifications = jobQualifications.replace("*","<li>");
 							var City = $(this).find("JOB_LOCATION_CITY").text();
 							var State = $(this).find("JOB_LOCATION_STATE").text();
 							var Country = $(this).find("JOB_LOCATION_COUNTRY").text();
 							var JobZipCode = $(this).find("JOB_LOCATION_ZIP").text();
 							var StartDate = $(this).find("ASSIGNMENT_START_DATE").text();
-							$('.ats-description').html(jobQualifications + "<br />" + jobDescription);
+							$('.ats-description').html("<ul>"+jobQualifications + "</ul><br />" + jobDescription);
 							$("h2.title").html(jobTitle);
 							$(".job-location").html(City+", "+State);
 							$(".job-id").html(jobID);

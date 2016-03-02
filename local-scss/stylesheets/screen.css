@@ -67,11 +67,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 8, ../sass/screen.scss */
+/* line 10, ../sass/screen.scss */
 #introductory {
   position: relative;
 }
-/* line 10, ../sass/screen.scss */
+/* line 12, ../sass/screen.scss */
 #introductory:after {
   content: url("/img/hackathon-graphic.png");
   -webkit-transform: rotate(30deg);
@@ -82,4 +82,160 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: absolute;
   top: 10%;
   left: 10%;
+}
+
+/* line 25, ../sass/screen.scss */
+.hide-text, .flex section .close span {
+  display: block;
+  text-indent: 100%;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* line 33, ../sass/screen.scss */
+.compare {
+  float: left;
+  margin: 15px 15px 0 0;
+}
+
+/* line 37, ../sass/screen.scss */
+.list-item {
+  float: left;
+}
+
+/* line 42, ../sass/screen.scss */
+#search-results-list ul li {
+  display: block;
+  width: 100%;
+  clear: left;
+}
+
+/* line 49, ../sass/screen.scss */
+#search-results h1 {
+  margin: 0 0 0;
+}
+
+/* line 52, ../sass/screen.scss */
+.head-compare {
+  margin: 0 0 10px;
+}
+/* line 54, ../sass/screen.scss */
+.head-compare:after {
+  content: "Select up to 3 jobs to compare";
+  background: #0895d3 none repeat scroll 0 0;
+  padding: 5px 10px;
+  display: inline-block;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* line 63, ../sass/screen.scss */
+.btn {
+  background-color: #0895d3;
+  border: 1px solid #0895d3;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica HV","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  line-height: 44px;
+  margin: 1em 1em 1em 0;
+  min-width: 255px;
+  padding: 5px 0 0;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out 0s;
+  width: 100%;
+  max-width: 255px;
+}
+
+/* line 81, ../sass/screen.scss */
+.flex {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+/* line 85, ../sass/screen.scss */
+.flex section {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+/* line 95, ../sass/screen.scss */
+.flex section:first-of-type h1 {
+  border-bottom: 1px dashed #b7c7d0;
+  color: #263343;
+  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-size: 3em;
+  font-weight: normal;
+  margin: 0 0 10px;
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+/* line 107, ../sass/screen.scss */
+.flex section div {
+  width: 27%;
+  border-left: 1px dashed #b7c7d0;
+  padding: 1em 1.5%;
+  position: relative;
+}
+/* line 113, ../sass/screen.scss */
+.flex section h1 {
+  display: inline;
+  color: #0895d3;
+  font-family: "Helvetica HV","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-size: 1rem;
+  padding: 1em 0;
+  margin: 0 auto;
+  text-align: left;
+  text-transform: uppercase;
+}
+/* line 123, ../sass/screen.scss */
+.flex section h2 {
+  text-align: center;
+  padding: 0 25px;
+}
+/* line 127, ../sass/screen.scss */
+.flex section .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+}
+/* line 136, ../sass/screen.scss */
+.flex section .close:hover::before, .flex section .close:hover::after {
+  background: #0895d3;
+}
+/* line 141, ../sass/screen.scss */
+.flex section .close::before, .flex section .close::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: #000;
+}
+/* line 151, ../sass/screen.scss */
+.flex section .close::before {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* line 154, ../sass/screen.scss */
+.flex section .close::after {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
