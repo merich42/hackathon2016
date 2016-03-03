@@ -1,0 +1,78 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/drg.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*@import "compass/reset";*/
+/* line 16, ../sass/drg.scss */
+.sr-details {
+  max-width: 625px;
+  clear: both;
+  margin-left: 2em;
+}
+
+/* line 22, ../sass/drg.scss */
+.sr-details {
+  clear: both;
+  margin-left: 2em;
+  max-width: 625px;
+  /*.btn-sr-detail {*/
+}
+/* line 9, ../sass/drg.scss */
+.sr-details:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 28, ../sass/drg.scss */
+.sr-details > a {
+  border: 1px solid #ebeef0;
+  padding: 0 1em;
+  margin-top: 4px;
+  float: left;
+  display: block;
+}
+/* line 34, ../sass/drg.scss */
+.sr-details > a:after {
+  background: url("//tbcdn.talentbrew.com/company/3401/v1_0/img/button/filter-arrows.png") repeat scroll 31px 0 transparent;
+  content: " ";
+  float: right;
+  height: 11px;
+  margin-top: 4px;
+  margin-left: 6px;
+  width: 18px;
+}
+/* line 43, ../sass/drg.scss */
+.sr-details > a.active {
+  background-color: #ebeef0;
+}
+/* line 45, ../sass/drg.scss */
+.sr-details > a.active:after {
+  background-position: 31px -19px;
+  content: " ";
+}
+/* line 51, ../sass/drg.scss */
+.sr-details > div {
+  display: none;
+  padding: 1em;
+  clear: both;
+  background-color: #ebeef0;
+  margin-bottom: 4px;
+}
+/* line 58, ../sass/drg.scss */
+.sr-details p {
+  margin: 0 0 .5em 0;
+}
+
+/* line 63, ../sass/drg.scss */
+#search-results-list > ul .sr-details a {
+  padding: 0.5em 1em;
+}
+/* line 65, ../sass/drg.scss */
+#search-results-list > ul .sr-details a:hover {
+  background: none repeat scroll 0 0 #ebeef0;
+}
+
+/* line 71, ../sass/drg.scss */
+#search-results-list ul li {
+  padding-bottom: 4px;
+}

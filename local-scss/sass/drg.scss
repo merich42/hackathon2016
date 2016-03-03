@@ -1,0 +1,75 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/drg.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+/*@import "compass/reset";*/
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.sr-details {
+  max-width: 625px;
+  clear: both;
+  margin-left: 2em;
+}
+
+.sr-details {
+	clear: both;
+	margin-left: 2em;
+  	max-width:625px;
+	@include clearfix;
+	/*.btn-sr-detail {*/
+	> a {
+		border: 1px solid #ebeef0;
+		padding:0 1em;
+		margin-top: 4px;
+		float: left;
+		display:block;
+		&:after {
+			background: url("//tbcdn.talentbrew.com/company/3401/v1_0/img/button/filter-arrows.png") repeat scroll 31px 0 rgba(0, 0, 0, 0);
+			content: " ";
+			float: right;
+			height: 11px;
+			margin-top: 4px;
+			margin-left: 6px;
+			width: 18px;
+		}
+		&.active {
+			background-color: #ebeef0;
+			&:after {
+				background-position: 31px -19px;
+				content: " ";
+			}
+		}
+	}
+	> div {
+		display:none;
+		padding:1em;
+		clear:both;
+		background-color:#ebeef0;
+		margin-bottom:4px;
+	}
+	p {
+		margin:0 0 .5em 0;
+	}
+} 
+
+#search-results-list > ul .sr-details a {
+  padding: 0.5em 1em;
+  &:hover {
+  	background: none repeat scroll 0 0 #ebeef0;
+  }
+}
+
+
+#search-results-list ul li {
+  padding-bottom:4px;
+}
+
+               

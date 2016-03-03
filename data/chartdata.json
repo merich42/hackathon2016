@@ -1,0 +1,11 @@
+{
+  "cols": [
+        {"id":"","label":"Range","pattern":"","type":"string"},
+        {"id":"","label":"Salary","pattern":"","type":"number"}
+      ],
+  "rows": [
+        {"c":[{"v":"low","f":null},{"v":50000,"f":null}]},
+        {"c":[{"v":"typical","f":null},{"v":75000,"f":null}]},
+        {"c":[{"v":"high","f":null},{"v":100000,"f":null}]}
+      ]
+}
