@@ -149,117 +149,46 @@
     
             <article>
 				<div class="page-content-container">
+				<h1 class="title">Compare Jobs</h1>
 					<div class="flex">
 					<section>
-						<h1>Compare Jobs</h1>
-						<div>
-							<h2>Job 1</h2>
-							<a class="close" href="#"><span>Remove Job</span></a>
-						</div>
-						<div>
-							<h2>Job 2</h2>
-						</div>
-						<div>
-							<h2>Job 3</h2>
-						</div>
+						
+						<h3 class="hide-text">Job Titles</h3>
 					</section>
 					<section>
 						<h1>Average Salary</h1>
-						<div>
-							Salary for job 1
-						</div>
-						<div>
-							Salary for job 2
-						</div>
-						<div>
-							Salary for job 3
-						</div>
+						
 					</section>
 					
 					<section>
 						<h1>Location</h1>
-						<div>
-							New York, NY
-						</div>
-						<div>
-							Washington, DC
-						</div>
-						<div>
-							Cleveland, OH
-						</div>
+						
 					</section>
 					
 					<section>
-						<h1>Experiance</h1>
-						<div>
-							Experiance for job 1
-						</div>
-						<div>
-							Experiance for job 2
-						</div>
-						<div>
-							Experiance for job 3
-						</div>
+						<h1>Required Experience</h1>
+						
 					</section>
 					
-					<section>
-						<h1>Requied Skills</h1>
-						<div>
-							Skills for job 1
-						</div>
-						<div>
-							Skills for job 2
-						</div>
-						<div>
-							Skills for job 3
-						</div>
-					</section>
+					
 					<section>
 						<h1>Relocation Offered</h1>
-						<div>
-							yes
-						</div>
-						<div>
-							no
-						</div>
-						<div>
-							no
-						</div>
+					
 					</section>
 					<section>
 						<h1>Job Contract Type</h1>
-						<div>
-							Full Time
-						</div>
-						<div>
-							Part Time
-						</div>
-						<div>
-							Contract-to-hire
-						</div>
+
 					</section>
 					<section>
-						<div>
-							<a href="#" class="job-apply">Apply Now</a>
-						</div> 
-						<div>
-							<a href="#" class="job-apply">Apply Now</a>
-						</div>
-						<div>
-							<a href="#" class="job-apply">Apply Now</a>
-						</div>
+						<h1>Travel Required</h1>
+
+					</section>
+					<section>
+						<h1>Job Description</h1>
 					</section>
 					
 					<section>
-						<div>
-							<a href="#" >More Details</a>
-						</div> 
-						<div>
-							<a href="#" >More Details</a>
-						</div>
-						<div>
-							<a href="#" >More Details</a>
-						</div>
+						<h1 class="hide-text">Apply Now</h1>
 					</section>
 					</div>
 				</div>
@@ -313,106 +242,177 @@
 
      <script>
 		$(document).ready(function() {
-			var container = $('<ul></ul>');
+					var job0 = getUrlParameter("job0");
+					var job1 = getUrlParameter("job1");
+					var job2 = getUrlParameter("job2");
+
 			$.ajax({
 				type: "GET",
 				url: "/xml/tmp-feed.xml",
 				dataType: "xml",
 				success: function(xml){
 					var count = $(xml).find("VIPER_JOB").size();
-					$(xml).find('VIPER_JOB').each(function(){
-						var jobID = $(this).find("JDTID_UNIQUE_NUMBER").text();
-						var jobTitle = $(this).find("JOB_TITLE").text();
-						var jobDescription = $(this).find("TEXT").text();
-						var jobCategory = $(this).find("JOB_CATEGORY").text();
-						var jobQualifications = $(this).find("QUALIFICATIONS").text();
-						var City = $(this).find("JOB_LOCATION_CITY").text();
-						var State = $(this).find("JOB_LOCATION_STATE").text();
-						var Country = $(this).find("JOB_LOCATION_COUNTRY").text();
-						var JobZipCode = $(this).find("JOB_LOCATION_ZIP").text();
-						var StartDate = $(this).find("ASSIGNMENT_START_DATE").text();
-						var chkbox = "<div class='compare'><label class='hide-text' for='"+jobID+"'>Select to compare "+jobTitle+"</label><input type='checkbox' id='"+jobID+"' /></div>";
-						var lnk = $('<a></a>');
-						lnk
-						.attr('data-job-id', jobID)
-						.attr('href', 'job-details.html?id='+jobID)
-						.addClass('list-item')
-						.append('<h2>'+jobTitle+'</h2><span class="job-location">'+City+', '+State+'</span>')
-						var listitem = $("<li></li>");
-						listitem.append(chkbox);
-						listitem.append(lnk);
-						container.append(listitem);
-					});
-					$("#search-results-list").append(container);
-					//check to see if check boxes are selected, then show button, grey out more than 3
-					$('.compare input:checkbox').click(function(){
-						checkForThree();
-					});
-					var compareBtn = $("<a></a>");
+					//for each url params get value
+					if(job0.length > 0 || job1.length > 0 || job2.length > 0){
+						$(xml).find('VIPER_JOB').each(function(){
+							var jobID = $(this).find("JDTID_UNIQUE_NUMBER").text();
+							if (jobID == job0){
+								var jobTitle = $(this).find("JOB_TITLE").text();
+								var jobDescription = $(this).find("TEXT").text();
+								var jobCategory = $(this).find("JOB_CATEGORY").text();
+								var jobSalary = $(this).find("JOB_SALARY_FROM").text()+" - "+$(this).find("JOB_SALARY_TO").text();
+								var jobQualifications = "<ul>";
+								jobQualifications += $(this).find("QUALIFICATIONS").text();
+								jobQualifications = jobQualifications.replace("*","<li>");
+								jobQualifications = jobQualifications.replace("REQUIREMENTS: ","");
+								jobQualifications = jobQualifications.replace("&#x2022;","</li><li>");
+								jobQualifications = jobQualifications.replace(/\*/g,"</li><li>");
+								jobQualifications += "</li></ul>";
+								var City = $(this).find("JOB_LOCATION_CITY").text();
+								var State = $(this).find("JOB_LOCATION_STATE").text();
+								var Country = $(this).find("JOB_LOCATION_COUNTRY").text();
+								var JobZipCode = $(this).find("JOB_LOCATION_ZIP").text();
+								var StartDate = $(this).find("ASSIGNMENT_START_DATE").text();
+								var Relocation = $(this).find("RELOCATION").text();
+								var JOB_STATUS = $(this).find("JOB_STATUS").text();
+								var TRAVEL = $(this).find("TRAVEL").text();
+								var url = $(this).find("JOB_APPLY_URL").text();
+								var apply = "<a href='"+url+"'s class=\"job-apply\">Apply Now</a>";
+								var moreDetails = "<p>"+jQuery.trim(jobDescription).substring(0, 200).split(" ").slice(0, -1).join(" ") + "..."+"</p><a href='\job-details.html?id="+jobID+"'>More Details</a>";
+								//first item is title
+								$('.flex section:first-of-type').append("<div><h2><a href='\job-details.html?id="+jobID+"'>"+jobTitle+"</a></h2><a class=\"close\" href=\"#\"><span>Remove Job</span></a>");
+								//second item is salary
+								$('.flex section:nth-of-type(2)').append("<div>"+jobSalary+"</div>");
+								//third is location
+								$('.flex section:nth-of-type(3)').append("<div>"+City+", "+State+"</div>");
+								//fourth is quals
+								$('.flex section:nth-of-type(4)').append("<div>"+jobQualifications+"</div>");
+								//fifth is relocation
+								$('.flex section:nth-of-type(5)').append("<div>"+Relocation+"</div>");
+								//sixth is full/part
+								$('.flex section:nth-of-type(6)').append("<div>"+JOB_STATUS+"</div>");
+								//seventh is travel
+								$('.flex section:nth-of-type(7)').append("<div>"+TRAVEL+"</div>");
+								//ninth is job apply
+								$('.flex section:nth-of-type(9)').append("<div>"+apply+"</div>");
+								//eighth is more details
+								$('.flex section:nth-of-type(8)').append("<div>"+moreDetails+"</div>");
+							}
+							else if (jobID == job1){
+								var jobTitle = $(this).find("JOB_TITLE").text();
+								var jobDescription = $(this).find("TEXT").text();
+								var jobCategory = $(this).find("JOB_CATEGORY").text();
+								var jobSalary = $(this).find("JOB_SALARY_FROM").text()+" - "+$(this).find("JOB_SALARY_TO").text();
+								var jobQualifications = "<ul>";
+								jobQualifications += $(this).find("QUALIFICATIONS").text();
+								jobQualifications = jobQualifications.replace("*","<li>");
+								jobQualifications = jobQualifications.replace("REQUIREMENTS: ","");
+								jobQualifications = jobQualifications.replace("&#x2022;","</li><li>");
+								jobQualifications = jobQualifications.replace(/\*/g,"</li><li>");
+								jobQualifications += "</li></ul>";
+								var City = $(this).find("JOB_LOCATION_CITY").text();
+								var State = $(this).find("JOB_LOCATION_STATE").text();
+								var Country = $(this).find("JOB_LOCATION_COUNTRY").text();
+								var JobZipCode = $(this).find("JOB_LOCATION_ZIP").text();
+								var StartDate = $(this).find("ASSIGNMENT_START_DATE").text();
+								var Relocation = $(this).find("RELOCATION").text();
+								var JOB_STATUS = $(this).find("JOB_STATUS").text();
+								var TRAVEL = $(this).find("TRAVEL").text();
+								var url = $(this).find("JOB_APPLY_URL").text();
+								var apply = "<a href='"+url+"'s class=\"job-apply\">Apply Now</a>";
+								var moreDetails = "<p>"+jQuery.trim(jobDescription).substring(0, 200).split(" ").slice(0, -1).join(" ") + "..."+"</p><a href='\job-details.html?id="+jobID+"'>More Details</a>";
+								//first item is title
+								$('.flex section:first-of-type').append("<div><h2><a href='\job-details.html?id="+jobID+"'>"+jobTitle+"</a></h2><a class=\"close\" href=\"#\"><span>Remove Job</span></a>");
+								//second item is salary
+								$('.flex section:nth-of-type(2)').append("<div>"+jobSalary+"</div>");
+								//third is location
+								$('.flex section:nth-of-type(3)').append("<div>"+City+", "+State+"</div>");
+								//fourth is quals
+								$('.flex section:nth-of-type(4)').append("<div>"+jobQualifications+"</div>");
+								//fifth is relocation
+								$('.flex section:nth-of-type(5)').append("<div>"+Relocation+"</div>");
+								//sixth is full/part
+								$('.flex section:nth-of-type(6)').append("<div>"+JOB_STATUS+"</div>");
+								//seventh is travel
+								$('.flex section:nth-of-type(7)').append("<div>"+TRAVEL+"</div>");
+								//ninth is job apply
+								$('.flex section:nth-of-type(9)').append("<div>"+apply+"</div>");
+								//eighth is more details
+								$('.flex section:nth-of-type(8)').append("<div>"+moreDetails+"</div>");
+							}
+							else if (jobID == job2){
+								var jobTitle = $(this).find("JOB_TITLE").text();
+								var jobDescription = $(this).find("TEXT").text();
+								var jobCategory = $(this).find("JOB_CATEGORY").text();
+								var jobSalary = $(this).find("JOB_SALARY_FROM").text()+" - "+$(this).find("JOB_SALARY_TO").text();
+								var jobQualifications = "<ul>";
+								jobQualifications += $(this).find("QUALIFICATIONS").text();
+								jobQualifications = jobQualifications.replace("*","<li>");
+								jobQualifications = jobQualifications.replace("REQUIREMENTS: ","");
+								jobQualifications = jobQualifications.replace("&#x2022;","</li><li>");
+								jobQualifications = jobQualifications.replace(/\*/g,"</li><li>");
+								jobQualifications += "</li></ul>";
+								var City = $(this).find("JOB_LOCATION_CITY").text();
+								var State = $(this).find("JOB_LOCATION_STATE").text();
+								var Country = $(this).find("JOB_LOCATION_COUNTRY").text();
+								var JobZipCode = $(this).find("JOB_LOCATION_ZIP").text();
+								var StartDate = $(this).find("ASSIGNMENT_START_DATE").text();
+								var Relocation = $(this).find("RELOCATION").text();
+								var JOB_STATUS = $(this).find("JOB_STATUS").text();
+								var TRAVEL = $(this).find("TRAVEL").text();
+								var url = $(this).find("JOB_APPLY_URL").text();
+								var apply = "<a href='"+url+"'s class=\"job-apply\">Apply Now</a>";
+								var moreDetails = "<p>"+jQuery.trim(jobDescription).substring(0, 200).split(" ").slice(0, -1).join(" ") + "..."+"</p><a href='\job-details.html?id="+jobID+"'>More Details</a>";
+								//first item is title
+								$('.flex section:first-of-type').append("<div><h2><a href='\job-details.html?id="+jobID+"'>"+jobTitle+"</a></h2><a class=\"close\" href=\"#\"><span>Remove Job</span></a>");
+								//second item is salary
+								$('.flex section:nth-of-type(2)').append("<div>"+jobSalary+"</div>");
+								//third is location
+								$('.flex section:nth-of-type(3)').append("<div>"+City+", "+State+"</div>");
+								//fourth is quals
+								$('.flex section:nth-of-type(4)').append("<div>"+jobQualifications+"</div>");
+								//fifth is relocation
+								$('.flex section:nth-of-type(5)').append("<div>"+Relocation+"</div>");
+								//sixth is full/part
+								$('.flex section:nth-of-type(6)').append("<div>"+JOB_STATUS+"</div>");
+								//seventh is travel
+								$('.flex section:nth-of-type(7)').append("<div>"+TRAVEL+"</div>");
+								//ninth is job apply
+								$('.flex section:nth-of-type(9)').append("<div>"+apply+"</div>");
+								//eighth is more details
+								$('.flex section:nth-of-type(8)').append("<div>"+moreDetails+"</div>");
+							}
+						});
+					}
 					
-					compareBtn
-					.attr('href', '/compare.html')
-					.addClass('hidden')
-					.html("Compare Selected Jobs")
-					.addClass('btn');
-					$('aside').append(compareBtn);
-					$("h1.rsts").html(count+" Results Found").after("<span class='head-compare'></span");
+					$('.close').click(function(e){
+						e.preventDefault();
+						var ind = $(this).parent("div").index();
+						console.log(ind);
+						$('.flex section div:nth-of-type('+ind+')').remove();
+					});
 				}
 			});
 			
 			
 		});
 		
-		function checkForThree(){
-			var count = $('.compare input:checkbox:checked').length;
-			if(count >= 3){
-				$(".compare input:checkbox:not(:checked)").attr("disabled", true);
-			} else {
-				$(".compare input:checkbox:not(:checked)").attr("disabled", false);
-			}
-			//show button for compare page
-			if(count > 1){
-				$('aside .btn').addClass('active');
-			} else {
-				$('aside .btn').removeClass('active');
-			}
-			//build url
-			var myUrl =  "compare.html";
-			$('.compare input:checkbox:checked').each(function(i){
-				if(i > 0){
-					myUrl =  $('aside .btn').attr('href');
+		function getUrlParameter(sParam) {
+			var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+				sURLVariables = sPageURL.split('&'),
+				sParameterName,
+				i;
+
+			for (i = 0; i < sURLVariables.length; i++) {
+				sParameterName = sURLVariables[i].split('=');
+
+				if (sParameterName[0] === sParam) {
+					return sParameterName[1] === undefined ? true : sParameterName[1];
 				}
-				var myJob = $(this).attr('id');
-				var myName = "job"+i;
-				console.log(addQSParm(myName, myJob, myUrl));
-				$('aside .btn').attr('href', addQSParm(myName, myJob, myUrl));
-			});
-			
-			
+			}
 		}
 		
-		function addQSParm(name, value, url) {
-			var myUrl = url;
-			var re = new RegExp("([?&]" + name + "=)[^&]+", "");
-
-			function add(sep) {
-				myUrl += sep + name + "=" + encodeURIComponent(value);
-			}
-
-			function change() {
-				myUrl = myUrl.replace(re, "$1" + encodeURIComponent(value));
-			}
-			if (myUrl.indexOf("?") === -1) {
-				add("?");
-			} else {
-				if (re.test(myUrl)) {
-					change();
-				} else {
-					add("&");
-				}
-			}
-			return myUrl;
-		}
+	
 		</script>
     
     
