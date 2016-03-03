@@ -77,7 +77,18 @@
     width: 100%;
 	max-width: 255px;
 }
-
+h1.title{
+	border-bottom: 1px dashed #b7c7d0;
+	color: #263343;
+	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-size: 3em;
+	font-weight: normal;
+	margin: 0 0 10px;
+	display: block;
+	width: 100%;
+	padding: 0;
+	
+}
 	.flex {
 		max-width: 1280px;
 		margin: 0 auto;
@@ -90,25 +101,29 @@
 			display: -webkit-flex;
 			display: flex;
 			flex-flow: row wrap;
-			justify-content: flex-end;
+			justify-content: flex-start;
+			align-items: flex-start;
 			&:first-of-type{
-				h1{
-					border-bottom: 1px dashed #b7c7d0;
-					color: #263343;
-					font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
-					font-size: 3em;
-					font-weight: normal;
-					margin: 0 0 10px;
-					display: block;
-					width: 100%;
-					padding: 0;
+				h3{
+					border-bottom: 0px dashed #b7c7d0;
+					width: 25%;
+					
 				}
 			}
 			div{
-				width: 27%;
+				width: 25%;
 				border-left: 1px dashed #b7c7d0;
 				padding: 1em 1.5%;
+				align-self: stretch;
 				position: relative;
+				
+			}
+			ul{
+				padding: 0 0 0 1em;
+				list-style: outside none disc;
+				li{
+					margin: .5em 0;
+				}
 			}
 			h1{
 				display: inline;
@@ -116,13 +131,14 @@
 				font-family: "Helvetica HV","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
 				font-size: 1rem;
 				padding: 1em 0;
-				margin: 0 auto;
 				text-align: left;
+				width: 25%;
+				align-self: stretch;
 				text-transform: uppercase;
 			}
 			h2{
 				text-align: center;
-				padding: 0 25px;
+				padding: 0 25px 0 10px;
 			}
 			.close {
 			  position: absolute;
