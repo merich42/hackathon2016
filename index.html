@@ -25,7 +25,7 @@
 </head>
 
 
-<body id="working-here" class="section-working-here  nav-pulldown"> 
+<body id="working-here" class="section-working-here home  nav-pulldown"> 
     
     <div id="page" data-template-name="default"> 
     
@@ -177,22 +177,70 @@
         <main id="primary-content">
     
             <article>
-    
-				<h1 class="wai">Search Jobs</h1>
-					<span>Or</span>
-					<p>Tell us about yourself</p>
+				<div class="flex">
+				<h2>Tell us About Yourself</h2>
 					
 					<form id="about-search" class="personal-search-form" action="/search-jobs.html" >
 						<div>
-							<label for="exp">Exp</label>
-							<select id="exp">
-								<option>0 - 3 years</option>
-							</select>
 						<div>
-						
-						<button id="search-submit-cf0cfb82ed">Submit</button>
+							<div>
+								
+								<p>Don't know what you are looking for? <br />The following 5 questions will help us suggest some job matches for you.</p>
+							</div>
+							<div class="img-choice">
+								<h3>What is your ideal work attire</h3>
+								<section>
+								<label for="pj"><img src="https://www.funzee.com/wp-content/uploads/2013/07/Retro-Hooded-Adult-Onesie-01.jpg" alt="selection 1"></label>
+								<input type="radio" name="img-choice" value="pjs" id="pj" />
+								
+								<label for="jeans"><img src="https://cdnd.lystit.com/photos/9904-2014/03/23/nudie-jeans-blue-nudie-t-shirt-one-pocket-organic-melange-product-1-18620781-2-557794060-normal.jpeg" alt="selection 2"></label>
+								<input type="radio" name="img-choice" value="jeans" id="jeans" />
+								
+								<label for="bus-casual"><img src="http://innovationacademy.ufl.edu/wp-content/uploads/2015/06/Business-Casual.jpg" alt="selection 1"></label>
+								<input type="radio" name="img-choice" value="bus-casual" id="bus-casual" />
+								
+								<label for="suit"><img src="http://www.mytrendyclothe.com/wp-content/uploads/2015/09/womens-suits-9.jpg" alt="selection 1"></label>
+								<input type="radio" name="img-choice" value="suit" />
+								</section>
+							</div>
+							
+							<div>
+								<label for="env">What is your ideal work attire? </label>
+								<select id="env">
+									<option>PJs and and laptop</option>
+									<option>Jeans and a T-shirt</option>
+									<option>business casual</option>
+									<option>Suit and a tie</option>
+								</select>
+							</div>
+							
+							<div>
+								<label for="env2">What is your ideal work attire? </label>
+								<select id="env2">
+									<option>PJs and and laptop</option>
+									<option>Jeans and a T-shirt</option>
+									<option>business casual</option>
+									<option>Suit and a tie</option>
+								</select>
+							</div>
+							
+							<div>
+								<label for="env3">What is your ideal work attire? </label>
+								<select id="env3">
+									<option>PJs and and laptop</option>
+									<option>Jeans and a T-shirt</option>
+									<option>business casual</option>
+									<option>Suit and a tie</option>
+								</select>
+							</div>
+							<div>
+								
+								<button id="search-submit-cf0cfb82ed">Submit</button>
+							</div>
+						</div>
+						</div>
 					</form>
-				
+				</div>
             </article>
     
         </main><!--/#primary-content-->
@@ -240,9 +288,35 @@
 
     <script src="//tbcdn.talentbrew.com/company/3401/js/2221-Full.min.js"></script>
     <script src="//tbcdn.talentbrew.com/bundles/form"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/i18n/jquery-ui-i18n.min.js"></script>
 
     
-    
+    <script>
+		$(document).ready(function() {
+			var nextBtn = $("<a></a>")
+				.addClass('next')
+				.attr("href", "#")
+				.text("Next")
+				//.css({display: "none"}
+				.click(function(e){
+					e.preventDefault();
+					$(this).parent().parent().fadeOut( "fast", function() {$(this).next().fadeIn()});
+				});
+				
+				var prevBtn = $("<a></a>")
+				.addClass('prev')
+				.attr("href", "#")
+				.text("Prev")
+				.click(function(e){
+					e.preventDefault();
+					$(this).parent().parent().fadeOut( "fast", function() {$(this).prev().fadeIn()});
+				});
+			var cont = $("<div></div>").addClass("pagination");
+			$("#about-search div > div > div").append(cont);
+			$("#about-search div > div > div:not(:first-of-type) .pagination").append(prevBtn);
+			$("#about-search div > div > div:not(:last-of-type) .pagination").append(nextBtn);
+		});
+	</script>
     
 
 
