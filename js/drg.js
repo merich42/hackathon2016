@@ -8,7 +8,9 @@ $(document).ready(function () {
 google.charts.load('current', {'packages':['corechart']});
 
 // Callback that creates and populates a data table, instantiates the chart, passes in the data and draws it.
-function drawChart(chartID) {
+function drawChart(chartID,jobTitle,jobLocation) {
+	
+	//need a way to pass in jobTitle, jobLocation to api to return salary data
 	
 	// Create the data table.
 	// examples using json - Google referece
@@ -72,7 +74,7 @@ function initBtnSRDetail(){
 		console.log('dataJobLocation: ' + dataJobLocation);
 		
 		// Set a callback to run when the Google Visualization API is loaded.
-		if(!$(this).hasClass('drawn'))google.charts.setOnLoadCallback(drawChart(dataJobId));
+		if(!$(this).hasClass('drawn'))google.charts.setOnLoadCallback(drawChart(dataJobId,dataJobTitle,dataJobLocation));
 		$(this).addClass('drawn');
 		
 	});	
