@@ -564,17 +564,19 @@
 						.attr('data-job-id', jobID)
 						.attr('href', 'job-details.html?id='+jobID)
 						.addClass('list-item')
-						.append('<h2>'+jobTitle+'</h2><span class="job-location">'+City+', '+State+'</span>')
+						.append('<h2>'+jobTitle+'</h2><span class="job-location" data-job-city="' + City + '" data-job-state="' + State + '">'+City+', '+State+'</span>')
 						var listitem = $("<li></li>");
 						listitem.append(chkbox);
 						listitem.append(lnk);
 						container.append(listitem);
 					});
+					
 					$("#search-results-list").append(container);
 					//check to see if check boxes are selected, then show button, grey out more than 3
 					$('.compare input:checkbox').click(function(){
 						checkForThree();
 					});
+					
 					var compareBtn = $("<a></a>");
 					
 					compareBtn

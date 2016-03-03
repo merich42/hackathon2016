@@ -8,18 +8,24 @@ $(document).ready(function () {
 google.charts.load('current', {'packages':['corechart']});
 
 // Callback that creates and populates a data table, instantiates the chart, passes in the data and draws it.
-function drawChart(chartID,jobTitle,jobLocation) {
+function drawChart(chartID,jobTitle,jobCity,jobState) {
 	
 	//need a way to pass in jobTitle, jobLocation to api to return salary data
+	//chartID,jobTitle,jobCity,jobState
 	
 	// Create the data table.
 	// examples using json - Google referece
 	//https://developers.google.com/chart/interactive/docs/php_example
 	//https://developers.google.com/chart/interactive/docs/reference#dataparam
 	
+	var params = {chartID:chartID,jobTitle:jobTitle,jobCity:jobCity,jobState:jobState};
+	var apiDataUrl = "/data/chartdata.json?" + jQuery.param( params );
+	//console.log(apiDataUrl);
+	
 	var jsonData = $.ajax({
-          url: "/data/chartdata.json", // using static data now but need to call PayScale api and return dynamic data based on job title and location
-          dataType: "json",
+          //url: "/data/chartdata.json", // using static data now but need to call PayScale api and return dynamic data based on job title and location
+          url: apiDataUrl,
+		  dataType: "json",
           async: false
           }).responseText;
 	
@@ -51,7 +57,7 @@ function addJobDetailContainer() {
 	// Adds the Details button and chart container --- called after ajax success
 	
 	$('#search-results-list li').each(function() {				
-		console.log($(this).find('h2').text());
+		//console.log($(this).find('h2').text());
 		$(this).append('<div class="sr-details"><a href="#" class="btn-sr-detail">Details</a><div><p>Detail about ' + $(this).find('h2').text() + '</p><div id="chart_div"></div></div></div>');
 	});	
 }
@@ -66,15 +72,17 @@ function initBtnSRDetail(){
 		var currJob = $(this).parent().parent().find('[data-job-id]');
 		var dataJobId = currJob.attr('data-job-id');
 		var dataJobTitle = currJob.find('h2').text();
-		var dataJobLocation = currJob.find('.job-location').text();
+		var dataJobCity = currJob.find('span').attr('data-job-city');
+		var dataJobState = currJob.find('span').attr('data-job-state');
 
-		console.log('currJob: ' + currJob);
+		/*console.log('currJob: ' + currJob);
 		console.log('dataJobId: ' + dataJobId);
 		console.log('dataJobTitle: ' + dataJobTitle);
-		console.log('dataJobLocation: ' + dataJobLocation);
+		console.log('dataJobCity: ' + dataJobCity);
+		console.log('dataJobState: ' + dataJobState);*/
 		
 		// Set a callback to run when the Google Visualization API is loaded.
-		if(!$(this).hasClass('drawn'))google.charts.setOnLoadCallback(drawChart(dataJobId,dataJobTitle,dataJobLocation));
+		if(!$(this).hasClass('drawn'))google.charts.setOnLoadCallback(drawChart(dataJobId,dataJobTitle,dataJobCity,dataJobState));
 		$(this).addClass('drawn');
 		
 	});	
