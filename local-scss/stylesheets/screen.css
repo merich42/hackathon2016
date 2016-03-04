@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -67,11 +68,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 10, ../sass/screen.scss */
+/* line 9, ../sass/screen.scss */
+* {
+  outline: 0;
+}
+
+/* line 12, ../sass/screen.scss */
 #introductory {
   position: relative;
 }
-/* line 12, ../sass/screen.scss */
+/* line 14, ../sass/screen.scss */
 #introductory:after {
   content: url("/img/hackathon-graphic.png");
   -webkit-transform: rotate(30deg);
@@ -84,7 +90,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   left: 10%;
 }
 
-/* line 25, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 .hide-text, .flex section .close span {
   display: block;
   text-indent: 100%;
@@ -93,41 +99,43 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   overflow: hidden;
 }
 
-/* line 33, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 .compare {
   float: left;
   margin: 15px 15px 0 0;
 }
 
-/* line 37, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 .list-item {
   float: left;
 }
 
-/* line 42, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 #search-results-list ul li {
   display: block;
   width: 100%;
   clear: left;
 }
-/* line 48, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 #search-results-list input[type=checkbox] {
   /* All browsers except webkit*/
   transform: scale(2);
   /* Webkit browsers*/
   -webkit-transform: scale(2);
+  border: 0;
+  outline: 0;
 }
 
-/* line 56, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 #search-results h1 {
   margin: 0 0 0;
 }
 
-/* line 59, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 .head-compare {
   margin: 0 0 10px;
 }
-/* line 61, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 .head-compare:after {
   content: "Select up to 3 jobs to compare";
   background: #0895d3 none repeat scroll 0 0;
@@ -137,7 +145,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 1rem;
 }
 
-/* line 70, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .btn {
   background-color: #0895d3;
   border: 1px solid #0895d3;
@@ -156,7 +164,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   max-width: 255px;
 }
 
-/* line 87, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 h1.title {
   border-bottom: 1px dashed #b7c7d0;
   color: #263343;
@@ -169,12 +177,12 @@ h1.title {
   padding: 0;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 .flex {
   max-width: 1280px;
   margin: 0 auto;
 }
-/* line 103, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .flex section {
   width: 100%;
   display: -webkit-box;
@@ -186,12 +194,12 @@ h1.title {
   justify-content: flex-start;
   align-items: flex-start;
 }
-/* line 114, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 .flex section:first-of-type h3 {
   border-bottom: 0px dashed #b7c7d0;
   width: 25%;
 }
-/* line 120, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 .flex section div {
   width: 25%;
   border-left: 1px dashed #b7c7d0;
@@ -199,16 +207,16 @@ h1.title {
   align-self: stretch;
   position: relative;
 }
-/* line 128, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 .flex section ul {
   padding: 0 0 0 1em;
-  list-style: outside none disc;
+  list-style: disc;
 }
-/* line 131, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 .flex section ul li {
   margin: .5em 0;
 }
-/* line 135, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .flex section h1 {
   display: inline;
   color: #0895d3;
@@ -220,12 +228,12 @@ h1.title {
   align-self: stretch;
   text-transform: uppercase;
 }
-/* line 146, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 .flex section h2 {
   text-align: center;
   padding: 0 25px 0 10px;
 }
-/* line 150, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 .flex section .close {
   position: absolute;
   top: 10px;
@@ -235,11 +243,11 @@ h1.title {
   height: 25px;
   overflow: hidden;
 }
-/* line 159, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 .flex section .close:hover::before, .flex section .close:hover::after {
   background: #0895d3;
 }
-/* line 164, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .flex section .close::before, .flex section .close::after {
   content: '';
   position: absolute;
@@ -250,14 +258,14 @@ h1.title {
   margin-top: -1px;
   background: #000;
 }
-/* line 174, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .flex section .close::before {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 177, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .flex section .close::after {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -265,77 +273,2706 @@ h1.title {
   transform: rotate(-45deg);
 }
 
-/* line 188, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 .home main article {
   padding: 60px 1em 0;
 }
 
-/* line 193, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 #about-search {
   border: 1px dashed #b7c7d0;
   width: 90%;
   padding: 40px 12.5%;
   display: block;
 }
-/* line 198, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 #about-search:after {
   content: '';
   display: block;
   clear: both;
 }
-/* line 203, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 #about-search > div {
   width: 100%;
 }
-/* line 205, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 #about-search > div > div {
   position: relative;
 }
-/* line 207, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 #about-search > div > div div {
   width: 100%;
   border-left: 0px;
 }
-/* line 210, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 #about-search > div > div div:not(:first-of-type) {
   display: none;
 }
-/* line 216, ../sass/screen.scss */
-#about-search .pagination {
+/* line 220, ../sass/screen.scss */
+#about-search .pagination-paging {
   clear: left;
   margin: 1em 0;
 }
-/* line 219, ../sass/screen.scss */
-#about-search .pagination .prev, #about-search .pagination .next {
+/* line 223, ../sass/screen.scss */
+#about-search .pagination-paging .prev, #about-search .pagination-paging .next {
   float: left;
 }
-/* line 224, ../sass/screen.scss */
-#about-search .pagination .next {
+/* line 227, ../sass/screen.scss */
+#about-search .pagination-paging .next {
   float: right;
 }
-/* line 229, ../sass/screen.scss */
+/* line 231, ../sass/screen.scss */
+#about-search button {
+  border: 1px dashed #ccc;
+  border-radius: 5px;
+  color: inherit;
+  display: inline-block;
+  padding: 5px 10px;
+  white-space: nowrap;
+  float: right;
+}
+/* line 239, ../sass/screen.scss */
+#about-search button:hover {
+  background-color: #0895d3;
+  border-style: solid;
+  color: #fff;
+  transform: scale(1.1);
+}
+/* line 246, ../sass/screen.scss */
 #about-search .img-choice {
   position: relative;
   overflow: hidden;
 }
-/* line 233, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 #about-search .img-choice section:after {
   content: '';
   display: block;
   clear: both;
 }
-/* line 239, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
 #about-search .img-choice label {
   width: 25%;
   float: left;
 }
-/* line 242, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 #about-search .img-choice label img {
-  width: 150px;
-  height: 150px;
+  max-width: 100%;
+  max-height: 250px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-/* line 247, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
+#about-search .img-choice label img:hover {
+  background-color: rgba(38, 51, 67, 0.9);
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  opacity: 1;
+}
+/* line 274, ../sass/screen.scss */
 #about-search .img-choice input[type=radio] {
   position: absolute;
   left: -100px;
+}
+/* line 280, ../sass/screen.scss */
+#about-search .range {
+  text-align: center;
+}
+/* line 282, ../sass/screen.scss */
+#about-search .range label {
+  text-align: left;
+}
+/* line 285, ../sass/screen.scss */
+#about-search .range span {
+  margin: 10px auto;
+  border-radius: 2px;
+  padding: 5px;
+  font-size: 1.25em;
+  font-weight: bold;
+  display: inline-block;
+}
+/* line 295, ../sass/screen.scss */
+#about-search .toggle {
+  margin: 1em 0 0;
+}
+/* line 349, ../sass/screen.scss */
+#about-search [type=range] {
+  -webkit-appearance: none;
+  margin: 15px 0;
+  width: 100%;
+}
+/* line 354, ../sass/screen.scss */
+#about-search [type=range]:focus {
+  outline: none;
+}
+/* line 358, ../sass/screen.scss */
+#about-search [type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  transition: all .2s ease;
+  box-shadow: 0px 0px 0px #222, 0 0 0px #2f2f2f;
+  background: #b7c7d0;
+  border: 1px solid #000;
+  border-radius: 1px;
+}
+/* line 366, ../sass/screen.scss */
+#about-search [type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #111, 0 0 1px #1e1e1e;
+  border: 1px solid #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  background: #0895d3;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
+}
+/* line 372, ../sass/screen.scss */
+#about-search [type=range]:focus::-webkit-slider-runnable-track {
+  background: #c6d3da;
+}
+/* line 376, ../sass/screen.scss */
+#about-search [type=range]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  transition: all .2s ease;
+  box-shadow: 0px 0px 0px #222, 0 0 0px #2f2f2f;
+  background: #b7c7d0;
+  border: 1px solid #000;
+  border-radius: 1px;
+}
+/* line 384, ../sass/screen.scss */
+#about-search [type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #111, 0 0 1px #1e1e1e;
+  border: 1px solid #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  background: #0895d3;
+  cursor: pointer;
+}
+/* line 388, ../sass/screen.scss */
+#about-search [type=range]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  transition: all .2s ease;
+  background: transparent;
+  border-color: transparent;
+  border-width: 30px 0;
+  color: transparent;
+}
+/* line 396, ../sass/screen.scss */
+#about-search [type=range]::-ms-fill-lower {
+  box-shadow: 0px 0px 0px #222, 0 0 0px #2f2f2f;
+  background: #a8bbc6;
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+/* line 403, ../sass/screen.scss */
+#about-search [type=range]::-ms-fill-upper {
+  box-shadow: 0px 0px 0px #222, 0 0 0px #2f2f2f;
+  background: #b7c7d0;
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+/* line 410, ../sass/screen.scss */
+#about-search [type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #111, 0 0 1px #1e1e1e;
+  border: 1px solid #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  background: #0895d3;
+  cursor: pointer;
+}
+/* line 414, ../sass/screen.scss */
+#about-search [type=range]:focus::-ms-fill-lower {
+  background: #b7c7d0;
+}
+/* line 418, ../sass/screen.scss */
+#about-search [type=range]:focus::-ms-fill-upper {
+  background: #c6d3da;
+}
+
+/* line 429, ../sass/screen.scss */
+.ui.checkbox {
+  position: relative;
+  display: inline-block;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  outline: 0;
+  vertical-align: baseline;
+  font-style: normal;
+  min-height: 17px;
+  font-size: 1rem;
+  line-height: 17px;
+  min-width: 17px;
+}
+
+/* line 443, ../sass/screen.scss */
+.ui.checkbox input[type=checkbox],
+.ui.checkbox input[type=radio] {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0 !important;
+  outline: 0;
+  z-index: 3;
+  width: 17px;
+  height: 17px;
+}
+
+/* line 456, ../sass/screen.scss */
+.ui.checkbox .box,
+.ui.checkbox label {
+  cursor: auto;
+  position: relative;
+  display: block;
+  padding-left: 1.85714em;
+  outline: 0;
+  font-size: 1em;
+}
+
+/* line 466, ../sass/screen.scss */
+.ui.checkbox .box:before,
+.ui.checkbox label:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  content: '';
+  background: #fff;
+  border-radius: .21428571rem;
+  -webkit-transition: border .1s ease, opacity .1s ease, -webkit-transform .1s ease, box-shadow .1s ease;
+  transition: border .1s ease, opacity .1s ease, transform .1s ease, box-shadow .1s ease;
+  border: 1px solid #d4d4d5;
+}
+
+/* line 481, ../sass/screen.scss */
+.ui.checkbox .box:after,
+.ui.checkbox label:after {
+  position: absolute;
+  font-size: 14px;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  text-align: center;
+  opacity: 0;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-transition: border .1s ease, opacity .1s ease, -webkit-transform .1s ease, box-shadow .1s ease;
+  transition: border .1s ease, opacity .1s ease, transform .1s ease, box-shadow .1s ease;
+  font-family: Checkbox;
+}
+
+/* line 497, ../sass/screen.scss */
+.ui.checkbox label,
+.ui.checkbox + label {
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-transition: color .1s ease;
+  transition: color 0.1s ease;
+}
+
+/* line 504, ../sass/screen.scss */
+.ui.checkbox + label {
+  vertical-align: middle;
+}
+
+/* line 508, ../sass/screen.scss */
+.ui.checkbox .box:hover::before,
+.ui.checkbox label:hover::before {
+  background: #fff;
+  border-color: rgba(34, 36, 38, 0.35);
+}
+
+/* line 514, ../sass/screen.scss */
+.ui.checkbox label:hover,
+.ui.checkbox + label:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 519, ../sass/screen.scss */
+.ui.checkbox .box:active::before,
+.ui.checkbox label:active::before {
+  background: #f9fafb;
+  border-color: rgba(34, 36, 38, 0.35);
+}
+
+/* line 525, ../sass/screen.scss */
+.ui.checkbox .box:active::after,
+.ui.checkbox input:active ~ label,
+.ui.checkbox label:active::after {
+  color: rgba(0, 0, 0, 0.95);
+}
+
+/* line 531, ../sass/screen.scss */
+.ui.checkbox input:focus ~ .box:before,
+.ui.checkbox input:focus ~ label:before {
+  background: #fff;
+  border-color: #96c8da;
+}
+
+/* line 537, ../sass/screen.scss */
+.ui.checkbox input:focus ~ .box:after,
+.ui.checkbox input:focus ~ label,
+.ui.checkbox input:focus ~ label:after {
+  color: rgba(0, 0, 0, 0.95);
+}
+
+/* line 543, ../sass/screen.scss */
+.ui.checkbox input:checked ~ .box:before,
+.ui.checkbox input:checked ~ label:before {
+  background: #fff;
+  border-color: rgba(34, 36, 38, 0.35);
+}
+
+/* line 549, ../sass/screen.scss */
+.ui.checkbox input:checked ~ .box:after,
+.ui.checkbox input:checked ~ label:after {
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.95);
+}
+
+/* line 555, ../sass/screen.scss */
+.ui.checkbox input:indeterminate ~ .box:before,
+.ui.checkbox input:indeterminate ~ label:before {
+  background: #fff;
+  border-color: rgba(34, 36, 38, 0.35);
+}
+
+/* line 561, ../sass/screen.scss */
+.ui.checkbox input:indeterminate ~ .box:after,
+.ui.checkbox input:indeterminate ~ label:after {
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.95);
+}
+
+/* line 567, ../sass/screen.scss */
+.ui.checkbox input:checked:focus ~ .box:before,
+.ui.checkbox input:checked:focus ~ label:before,
+.ui.checkbox input:indeterminate:focus ~ .box:before,
+.ui.checkbox input:indeterminate:focus ~ label:before {
+  background: #fff;
+  border-color: #96c8da;
+}
+
+/* line 575, ../sass/screen.scss */
+.ui.checkbox input:checked:focus ~ .box:after,
+.ui.checkbox input:checked:focus ~ label:after,
+.ui.checkbox input:indeterminate:focus ~ .box:after,
+.ui.checkbox input:indeterminate:focus ~ label:after {
+  color: rgba(0, 0, 0, 0.95);
+}
+
+/* line 582, ../sass/screen.scss */
+.ui.read-only.checkbox,
+.ui.read-only.checkbox label {
+  cursor: default;
+}
+
+/* line 587, ../sass/screen.scss */
+.ui.checkbox input[disabled] ~ .box:after,
+.ui.checkbox input[disabled] ~ label,
+.ui.disabled.checkbox .box:after,
+.ui.disabled.checkbox label {
+  cursor: default;
+  opacity: .5;
+  color: #000;
+}
+
+/* line 596, ../sass/screen.scss */
+.ui.checkbox input.hidden {
+  z-index: -1;
+}
+
+/* line 600, ../sass/screen.scss */
+.ui.checkbox input.hidden + label {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 608, ../sass/screen.scss */
+.ui.radio.checkbox {
+  min-height: 15px;
+}
+
+/* line 612, ../sass/screen.scss */
+.ui.radio.checkbox .box,
+.ui.radio.checkbox label {
+  padding-left: 1.85714em;
+}
+
+/* line 617, ../sass/screen.scss */
+.ui.radio.checkbox .box:before,
+.ui.radio.checkbox label:before {
+  content: '';
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 500rem;
+  top: 1px;
+  left: 0;
+}
+
+/* line 630, ../sass/screen.scss */
+.ui.radio.checkbox .box:after,
+.ui.radio.checkbox label:after {
+  border: none;
+  content: "" !important;
+  line-height: 15px;
+  top: 1px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 500rem;
+  -webkit-transform: scale(0.46667);
+  -ms-transform: scale(0.46667);
+  transform: scale(0.46667);
+  background-color: rgba(0, 0, 0, 0.87);
+}
+
+/* line 646, ../sass/screen.scss */
+.ui.radio.checkbox input:focus ~ .box:before,
+.ui.radio.checkbox input:focus ~ label:before {
+  background-color: #fff;
+}
+
+/* line 651, ../sass/screen.scss */
+.ui.radio.checkbox input:focus ~ .box:after,
+.ui.radio.checkbox input:focus ~ label:after {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+/* line 656, ../sass/screen.scss */
+.ui.radio.checkbox input:indeterminate ~ .box:after,
+.ui.radio.checkbox input:indeterminate ~ label:after {
+  opacity: 0;
+}
+
+/* line 661, ../sass/screen.scss */
+.ui.radio.checkbox input:checked ~ .box:before,
+.ui.radio.checkbox input:checked ~ label:before {
+  background-color: #fff;
+}
+
+/* line 666, ../sass/screen.scss */
+.ui.radio.checkbox input:checked ~ .box:after,
+.ui.radio.checkbox input:checked ~ label:after {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+/* line 671, ../sass/screen.scss */
+.ui.radio.checkbox input:focus:checked ~ .box:before,
+.ui.radio.checkbox input:focus:checked ~ label:before {
+  background-color: #fff;
+}
+
+/* line 676, ../sass/screen.scss */
+.ui.radio.checkbox input:focus:checked ~ .box:after,
+.ui.radio.checkbox input:focus:checked ~ label:after {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+/* line 681, ../sass/screen.scss */
+.ui.slider.checkbox {
+  min-height: 1.25rem;
+}
+
+/* line 685, ../sass/screen.scss */
+.ui.slider.checkbox input {
+  width: 3.5rem;
+  height: 1.25rem;
+}
+
+/* line 690, ../sass/screen.scss */
+.ui.slider.checkbox .box,
+.ui.slider.checkbox label {
+  padding-left: 4.5rem;
+  line-height: 1rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 697, ../sass/screen.scss */
+.ui.slider.checkbox .box:before,
+.ui.slider.checkbox label:before {
+  display: block;
+  position: absolute;
+  content: '';
+  border: none !important;
+  left: 0;
+  z-index: 1;
+  top: .4rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 3.5rem;
+  height: .21428571rem;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  border-radius: 500rem;
+  -webkit-transition: background .3s ease;
+  transition: background 0.3s ease;
+}
+
+/* line 717, ../sass/screen.scss */
+.ui.slider.checkbox .box:after,
+.ui.slider.checkbox label:after {
+  background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05)) #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05)) #fff;
+  position: absolute;
+  content: "" !important;
+  opacity: 1;
+  z-index: 2;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: -.25rem;
+  left: 0;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  border-radius: 500rem;
+  -webkit-transition: left .3s ease;
+  transition: left 0.3s ease;
+}
+
+/* line 739, ../sass/screen.scss */
+.ui.slider.checkbox input:focus ~ .box:before,
+.ui.slider.checkbox input:focus ~ label:before {
+  background-color: rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+/* line 745, ../sass/screen.scss */
+.ui.slider.checkbox .box:hover,
+.ui.slider.checkbox label:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 750, ../sass/screen.scss */
+.ui.slider.checkbox .box:hover::before,
+.ui.slider.checkbox label:hover::before {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* line 755, ../sass/screen.scss */
+.ui.slider.checkbox input:checked ~ .box,
+.ui.slider.checkbox input:checked ~ label {
+  color: rgba(0, 0, 0, 0.95) !important;
+}
+
+/* line 760, ../sass/screen.scss */
+.ui.slider.checkbox input:checked ~ .box:before,
+.ui.slider.checkbox input:checked ~ label:before {
+  background-color: #545454 !important;
+}
+
+/* line 765, ../sass/screen.scss */
+.ui.slider.checkbox input:checked ~ .box:after,
+.ui.slider.checkbox input:checked ~ label:after {
+  left: 2rem;
+}
+
+/* line 770, ../sass/screen.scss */
+.ui.slider.checkbox input:focus:checked ~ .box,
+.ui.slider.checkbox input:focus:checked ~ label {
+  color: rgba(0, 0, 0, 0.95) !important;
+}
+
+/* line 775, ../sass/screen.scss */
+.ui.slider.checkbox input:focus:checked ~ .box:before,
+.ui.slider.checkbox input:focus:checked ~ label:before {
+  background-color: #000 !important;
+}
+
+/* line 780, ../sass/screen.scss */
+.ui.toggle.checkbox {
+  min-height: 1.5rem;
+}
+
+/* line 784, ../sass/screen.scss */
+.ui.toggle.checkbox input {
+  width: 3.5rem;
+  height: 1.5rem;
+}
+
+/* line 789, ../sass/screen.scss */
+.ui.toggle.checkbox .box,
+.ui.toggle.checkbox label {
+  min-height: 1.5rem;
+  padding-left: 4.5rem;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* line 796, ../sass/screen.scss */
+.ui.toggle.checkbox label {
+  padding-top: 0.15em;
+}
+
+/* line 800, ../sass/screen.scss */
+.ui.toggle.checkbox .box:before,
+.ui.toggle.checkbox label:before {
+  display: block;
+  position: absolute;
+  content: '';
+  z-index: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  border: none;
+  top: 0;
+  background: rgba(0, 0, 0, 0.05);
+  width: 3.5rem;
+  height: 1.5rem;
+  border-radius: 500rem;
+}
+
+/* line 817, ../sass/screen.scss */
+.ui.toggle.checkbox .box:after,
+.ui.toggle.checkbox label:after {
+  background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05)) #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05)) #fff;
+  position: absolute;
+  content: "" !important;
+  opacity: 1;
+  z-index: 2;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15), 0 0 0 1px rgba(34, 36, 38, 0.15) inset;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0;
+  left: 0;
+  border-radius: 500rem;
+  -webkit-transition: background .3s ease, left .3s ease;
+  transition: background 0.3s ease, left 0.3s ease;
+}
+
+/* line 836, ../sass/screen.scss */
+.ui.toggle.checkbox input ~ .box:after,
+.ui.toggle.checkbox input ~ label:after {
+  left: -0.05rem;
+}
+
+/* line 841, ../sass/screen.scss */
+.ui.toggle.checkbox .box:hover::before,
+.ui.toggle.checkbox input:focus ~ .box:before,
+.ui.toggle.checkbox input:focus ~ label:before,
+.ui.toggle.checkbox label:hover::before {
+  background-color: rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+/* line 849, ../sass/screen.scss */
+.ui.toggle.checkbox input:checked ~ .box,
+.ui.toggle.checkbox input:checked ~ label {
+  color: rgba(0, 0, 0, 0.95) !important;
+}
+
+/* line 854, ../sass/screen.scss */
+.ui.toggle.checkbox input:checked ~ .box:before,
+.ui.toggle.checkbox input:checked ~ label:before {
+  background-color: #2185d0 !important;
+}
+
+/* line 859, ../sass/screen.scss */
+.ui.toggle.checkbox input:checked ~ .box:after,
+.ui.toggle.checkbox input:checked ~ label:after {
+  left: 2.15rem;
+}
+
+/* line 864, ../sass/screen.scss */
+.ui.toggle.checkbox input:focus:checked ~ .box,
+.ui.toggle.checkbox input:focus:checked ~ label {
+  color: rgba(0, 0, 0, 0.95) !important;
+}
+
+/* line 869, ../sass/screen.scss */
+.ui.toggle.checkbox input:focus:checked ~ .box:before,
+.ui.toggle.checkbox input:focus:checked ~ label:before {
+  background-color: #0d71bb !important;
+}
+
+/* line 874, ../sass/screen.scss */
+.ui.fitted.checkbox .box,
+.ui.fitted.checkbox label {
+  padding-left: 0 !important;
+}
+
+/* line 879, ../sass/screen.scss */
+.ui.fitted.slider.checkbox,
+.ui.fitted.toggle.checkbox {
+  width: 3.5rem;
+}
+
+@font-face {
+  font-family: Checkbox;
+  src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SBD8AAAC8AAAAYGNtYXAYVtCJAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5Zn4huwUAAAF4AAABYGhlYWQGPe1ZAAAC2AAAADZoaGVhB30DyAAAAxAAAAAkaG10eBBKAEUAAAM0AAAAHGxvY2EAmgESAAADUAAAABBtYXhwAAkALwAAA2AAAAAgbmFtZSC8IugAAAOAAAABknBvc3QAAwAAAAAFFAAAACAAAwMTAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADoAgPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg6AL//f//AAAAAAAg6AD//f//AAH/4xgEAAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAEUAUQO7AvgAGgAAARQHAQYjIicBJjU0PwE2MzIfAQE2MzIfARYVA7sQ/hQQFhcQ/uMQEE4QFxcQqAF2EBcXEE4QAnMWEP4UEBABHRAXFhBOEBCoAXcQEE4QFwAAAAABAAABbgMlAkkAFAAAARUUBwYjISInJj0BNDc2MyEyFxYVAyUQEBf9SRcQEBAQFwK3FxAQAhJtFxAQEBAXbRcQEBAQFwAAAAABAAAASQMlA24ALAAAARUUBwYrARUUBwYrASInJj0BIyInJj0BNDc2OwE1NDc2OwEyFxYdATMyFxYVAyUQEBfuEBAXbhYQEO4XEBAQEBfuEBAWbhcQEO4XEBACEm0XEBDuFxAQEBAX7hAQF20XEBDuFxAQEBAX7hAQFwAAAQAAAAIAAHRSzT9fDzz1AAsEAAAAAADRsdR3AAAAANGx1HcAAAAAA7sDbgAAAAgAAgAAAAAAAAABAAADwP/AAAAEAAAAAAADuwABAAAAAAAAAAAAAAAAAAAABwQAAAAAAAAAAAAAAAIAAAAEAABFAyUAAAMlAAAAAAAAAAoAFAAeAE4AcgCwAAEAAAAHAC0AAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAIAAAAAQAAAAAAAgAHAGkAAQAAAAAAAwAIADkAAQAAAAAABAAIAH4AAQAAAAAABQALABgAAQAAAAAABgAIAFEAAQAAAAAACgAaAJYAAwABBAkAAQAQAAgAAwABBAkAAgAOAHAAAwABBAkAAwAQAEEAAwABBAkABAAQAIYAAwABBAkABQAWACMAAwABBAkABgAQAFkAAwABBAkACgA0ALBDaGVja2JveABDAGgAZQBjAGsAYgBvAHhWZXJzaW9uIDIuMABWAGUAcgBzAGkAbwBuACAAMgAuADBDaGVja2JveABDAGgAZQBjAGsAYgBvAHhDaGVja2JveABDAGgAZQBjAGsAYgBvAHhSZWd1bGFyAFIAZQBnAHUAbABhAHJDaGVja2JveABDAGgAZQBjAGsAYgBvAHhGb250IGdlbmVyYXRlZCBieSBJY29Nb29uLgBGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABJAGMAbwBNAG8AbwBuAC4AAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format("truetype");
+}
+/* line 889, ../sass/screen.scss */
+.ui.checkbox input:checked ~ .box:after,
+.ui.checkbox input:checked ~ label:after {
+  content: "";
+}
+
+/* line 894, ../sass/screen.scss */
+.ui.checkbox input:indeterminate ~ .box:after,
+.ui.checkbox input:indeterminate ~ label:after {
+  font-size: 12px;
+  content: "";
+}
+
+/* line 901, ../sass/screen.scss */
+.transition {
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 912, ../sass/screen.scss */
+.animating.transition {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  visibility: visible !important;
+}
+
+/* line 918, ../sass/screen.scss */
+.loading.transition {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+}
+
+/* line 924, ../sass/screen.scss */
+.hidden.transition {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 929, ../sass/screen.scss */
+.visible.transition {
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* line 934, ../sass/screen.scss */
+.disabled.transition {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+/* line 939, ../sass/screen.scss */
+.looping.transition {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/* line 944, ../sass/screen.scss */
+.transition.browse {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+}
+
+/* line 949, ../sass/screen.scss */
+.transition.browse.in {
+  -webkit-animation-name: browseIn;
+  animation-name: browseIn;
+}
+
+/* line 954, ../sass/screen.scss */
+.transition.browse.left.out,
+.transition.browse.out {
+  -webkit-animation-name: browseOutLeft;
+  animation-name: browseOutLeft;
+}
+
+/* line 960, ../sass/screen.scss */
+.transition.browse.right.out {
+  -webkit-animation-name: browseOutRight;
+  animation-name: browseOutRight;
+}
+
+@-webkit-keyframes browseIn {
+  0% {
+    -webkit-transform: scale(0.8) translateZ(0);
+    transform: scale(0.8) translateZ(0);
+    z-index: -1;
+  }
+  10% {
+    -webkit-transform: scale(0.8) translateZ(0);
+    transform: scale(0.8) translateZ(0);
+    z-index: -1;
+    opacity: 0.7;
+  }
+  80% {
+    -webkit-transform: scale(1.05) translateZ(0);
+    transform: scale(1.05) translateZ(0);
+    opacity: 1;
+    z-index: 999;
+  }
+  100% {
+    -webkit-transform: scale(1) translateZ(0);
+    transform: scale(1) translateZ(0);
+    z-index: 999;
+  }
+}
+@keyframes browseIn {
+  0% {
+    -webkit-transform: scale(0.8) translateZ(0);
+    transform: scale(0.8) translateZ(0);
+    z-index: -1;
+  }
+  10% {
+    -webkit-transform: scale(0.8) translateZ(0);
+    transform: scale(0.8) translateZ(0);
+    z-index: -1;
+    opacity: 0.7;
+  }
+  80% {
+    -webkit-transform: scale(1.05) translateZ(0);
+    transform: scale(1.05) translateZ(0);
+    opacity: 1;
+    z-index: 999;
+  }
+  100% {
+    -webkit-transform: scale(1) translateZ(0);
+    transform: scale(1) translateZ(0);
+    z-index: 999;
+  }
+}
+@-webkit-keyframes browseOutLeft {
+  0% {
+    z-index: 999;
+    -webkit-transform: translateX(0) rotateY(0) rotateX(0);
+    transform: translateX(0) rotateY(0) rotateX(0);
+  }
+  50% {
+    z-index: -1;
+    -webkit-transform: translateX(-105%) rotateY(35deg) rotateX(10deg) translateZ(-10px);
+    transform: translateX(-105%) rotateY(35deg) rotateX(10deg) translateZ(-10px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    z-index: -1;
+    -webkit-transform: translateX(0) rotateY(0) rotateX(0) translateZ(-10px);
+    transform: translateX(0) rotateY(0) rotateX(0) translateZ(-10px);
+    opacity: 0;
+  }
+}
+@keyframes browseOutLeft {
+  0% {
+    z-index: 999;
+    -webkit-transform: translateX(0) rotateY(0) rotateX(0);
+    transform: translateX(0) rotateY(0) rotateX(0);
+  }
+  50% {
+    z-index: -1;
+    -webkit-transform: translateX(-105%) rotateY(35deg) rotateX(10deg) translateZ(-10px);
+    transform: translateX(-105%) rotateY(35deg) rotateX(10deg) translateZ(-10px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    z-index: -1;
+    -webkit-transform: translateX(0) rotateY(0) rotateX(0) translateZ(-10px);
+    transform: translateX(0) rotateY(0) rotateX(0) translateZ(-10px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes browseOutRight {
+  0% {
+    z-index: 999;
+    -webkit-transform: translateX(0) rotateY(0) rotateX(0);
+    transform: translateX(0) rotateY(0) rotateX(0);
+  }
+  50% {
+    z-index: 1;
+    -webkit-transform: translateX(105%) rotateY(35deg) rotateX(10deg) translateZ(-10px);
+    transform: translateX(105%) rotateY(35deg) rotateX(10deg) translateZ(-10px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    z-index: 1;
+    -webkit-transform: translateX(0) rotateY(0) rotateX(0) translateZ(-10px);
+    transform: translateX(0) rotateY(0) rotateX(0) translateZ(-10px);
+    opacity: 0;
+  }
+}
+@keyframes browseOutRight {
+  0% {
+    z-index: 999;
+    -webkit-transform: translateX(0) rotateY(0) rotateX(0);
+    transform: translateX(0) rotateY(0) rotateX(0);
+  }
+  50% {
+    z-index: 1;
+    -webkit-transform: translateX(105%) rotateY(35deg) rotateX(10deg) translateZ(-10px);
+    transform: translateX(105%) rotateY(35deg) rotateX(10deg) translateZ(-10px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    z-index: 1;
+    -webkit-transform: translateX(0) rotateY(0) rotateX(0) translateZ(-10px);
+    transform: translateX(0) rotateY(0) rotateX(0) translateZ(-10px);
+    opacity: 0;
+  }
+}
+/* line 1103, ../sass/screen.scss */
+.drop.transition {
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-duration: 400ms;
+  animation-duration: 400ms;
+  -webkit-animation-timing-function: cubic-bezier(0.34, 1.61, 0.7, 1);
+  animation-timing-function: cubic-bezier(0.34, 1.61, 0.7, 1);
+}
+
+/* line 1113, ../sass/screen.scss */
+.drop.transition.in {
+  -webkit-animation-name: dropIn;
+  animation-name: dropIn;
+}
+
+/* line 1118, ../sass/screen.scss */
+.drop.transition.out {
+  -webkit-animation-name: dropOut;
+  animation-name: dropOut;
+}
+
+@-webkit-keyframes dropIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes dropOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+@keyframes dropOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+/* line 1175, ../sass/screen.scss */
+.transition.fade.in {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/* line 1180, ../sass/screen.scss */
+.transition[class*="fade up"].in {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/* line 1185, ../sass/screen.scss */
+.transition[class*="fade down"].in {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+/* line 1190, ../sass/screen.scss */
+.transition[class*="fade left"].in {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+/* line 1195, ../sass/screen.scss */
+.transition[class*="fade right"].in {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+/* line 1200, ../sass/screen.scss */
+.transition.fade.out {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+/* line 1205, ../sass/screen.scss */
+.transition[class*="fade up"].out {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+/* line 1210, ../sass/screen.scss */
+.transition[class*="fade down"].out {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+/* line 1215, ../sass/screen.scss */
+.transition[class*="fade left"].out {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+/* line 1220, ../sass/screen.scss */
+.transition[class*="fade right"].out {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10%);
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10%);
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10%);
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10%);
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10%);
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10%);
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(5%);
+    transform: translateY(5%);
+  }
+}
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(5%);
+    transform: translateY(5%);
+  }
+}
+@-webkit-keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-5%);
+    transform: translateY(-5%);
+  }
+}
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-5%);
+    transform: translateY(-5%);
+  }
+}
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(5%);
+    transform: translateX(5%);
+  }
+}
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(5%);
+    transform: translateX(5%);
+  }
+}
+@-webkit-keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-5%);
+    transform: translateX(-5%);
+  }
+}
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-5%);
+    transform: translateX(-5%);
+  }
+}
+/* line 1469, ../sass/screen.scss */
+.flip.transition.in,
+.flip.transition.out {
+  -webkit-animation-duration: 600ms;
+  animation-duration: 600ms;
+}
+
+/* line 1475, ../sass/screen.scss */
+.horizontal.flip.transition.in {
+  -webkit-animation-name: horizontalFlipIn;
+  animation-name: horizontalFlipIn;
+}
+
+/* line 1480, ../sass/screen.scss */
+.horizontal.flip.transition.out {
+  -webkit-animation-name: horizontalFlipOut;
+  animation-name: horizontalFlipOut;
+}
+
+/* line 1485, ../sass/screen.scss */
+.vertical.flip.transition.in {
+  -webkit-animation-name: verticalFlipIn;
+  animation-name: verticalFlipIn;
+}
+
+/* line 1490, ../sass/screen.scss */
+.vertical.flip.transition.out {
+  -webkit-animation-name: verticalFlipOut;
+  animation-name: verticalFlipOut;
+}
+
+@-webkit-keyframes horizontalFlipIn {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(-90deg);
+    transform: perspective(2000px) rotateY(-90deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+    transform: perspective(2000px) rotateY(0);
+    opacity: 1;
+  }
+}
+@keyframes horizontalFlipIn {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(-90deg);
+    transform: perspective(2000px) rotateY(-90deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+    transform: perspective(2000px) rotateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes verticalFlipIn {
+  0% {
+    -webkit-transform: perspective(2000px) rotateX(-90deg);
+    transform: perspective(2000px) rotateX(-90deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateX(0);
+    transform: perspective(2000px) rotateX(0);
+    opacity: 1;
+  }
+}
+@keyframes verticalFlipIn {
+  0% {
+    -webkit-transform: perspective(2000px) rotateX(-90deg);
+    transform: perspective(2000px) rotateX(-90deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateX(0);
+    transform: perspective(2000px) rotateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes horizontalFlipOut {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+    transform: perspective(2000px) rotateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(90deg);
+    transform: perspective(2000px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+@keyframes horizontalFlipOut {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+    transform: perspective(2000px) rotateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(90deg);
+    transform: perspective(2000px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes verticalFlipOut {
+  0% {
+    -webkit-transform: perspective(2000px) rotateX(0);
+    transform: perspective(2000px) rotateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateX(-90deg);
+    transform: perspective(2000px) rotateX(-90deg);
+    opacity: 0;
+  }
+}
+@keyframes verticalFlipOut {
+  0% {
+    -webkit-transform: perspective(2000px) rotateX(0);
+    transform: perspective(2000px) rotateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateX(-90deg);
+    transform: perspective(2000px) rotateX(-90deg);
+    opacity: 0;
+  }
+}
+/* line 1599, ../sass/screen.scss */
+.scale.transition.in {
+  -webkit-animation-name: scaleIn;
+  animation-name: scaleIn;
+}
+
+/* line 1604, ../sass/screen.scss */
+.scale.transition.out {
+  -webkit-animation-name: scaleOut;
+  animation-name: scaleOut;
+}
+
+@-webkit-keyframes scaleIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes scaleOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes scaleOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+/* line 1661, ../sass/screen.scss */
+.transition.fly {
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 1668, ../sass/screen.scss */
+.transition.fly.in {
+  -webkit-animation-name: flyIn;
+  animation-name: flyIn;
+}
+
+/* line 1673, ../sass/screen.scss */
+.transition[class*="fly up"].in {
+  -webkit-animation-name: flyInUp;
+  animation-name: flyInUp;
+}
+
+/* line 1678, ../sass/screen.scss */
+.transition[class*="fly down"].in {
+  -webkit-animation-name: flyInDown;
+  animation-name: flyInDown;
+}
+
+/* line 1683, ../sass/screen.scss */
+.transition[class*="fly left"].in {
+  -webkit-animation-name: flyInLeft;
+  animation-name: flyInLeft;
+}
+
+/* line 1688, ../sass/screen.scss */
+.transition[class*="fly right"].in {
+  -webkit-animation-name: flyInRight;
+  animation-name: flyInRight;
+}
+
+/* line 1693, ../sass/screen.scss */
+.transition.fly.out {
+  -webkit-animation-name: flyOut;
+  animation-name: flyOut;
+}
+
+/* line 1698, ../sass/screen.scss */
+.transition[class*="fly up"].out {
+  -webkit-animation-name: flyOutUp;
+  animation-name: flyOutUp;
+}
+
+/* line 1703, ../sass/screen.scss */
+.transition[class*="fly down"].out {
+  -webkit-animation-name: flyOutDown;
+  animation-name: flyOutDown;
+}
+
+/* line 1708, ../sass/screen.scss */
+.transition[class*="fly left"].out {
+  -webkit-animation-name: flyOutLeft;
+  animation-name: flyOutLeft;
+}
+
+/* line 1713, ../sass/screen.scss */
+.transition[class*="fly right"].out {
+  -webkit-animation-name: flyOutRight;
+  animation-name: flyOutRight;
+}
+
+@-webkit-keyframes flyIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes flyIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes flyInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 1500px, 0);
+    transform: translate3d(0, 1500px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes flyInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 1500px, 0);
+    transform: translate3d(0, 1500px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes flyInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -1500px, 0);
+    transform: translate3d(0, -1500px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes flyInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -1500px, 0);
+    transform: translate3d(0, -1500px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@-webkit-keyframes flyInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(1500px, 0, 0);
+    transform: translate3d(1500px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes flyInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(1500px, 0, 0);
+    transform: translate3d(1500px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@-webkit-keyframes flyInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-1500px, 0, 0);
+    transform: translate3d(-1500px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes flyInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-1500px, 0, 0);
+    transform: translate3d(-1500px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@-webkit-keyframes flyOut {
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  50%,
+     55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+@keyframes flyOut {
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  50%,
+     55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+@-webkit-keyframes flyOutUp {
+  20% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  40%,
+     45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+@keyframes flyOutUp {
+  20% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  40%,
+     45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+@-webkit-keyframes flyOutDown {
+  20% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+  40%,
+     45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+@keyframes flyOutDown {
+  20% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+  40%,
+     45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+@-webkit-keyframes flyOutRight {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+@keyframes flyOutRight {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+@-webkit-keyframes flyOutLeft {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+@keyframes flyOutLeft {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+/* line 2138, ../sass/screen.scss */
+.transition.slide.in,
+.transition[class*="slide down"].in {
+  -webkit-animation-name: slideInY;
+  animation-name: slideInY;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+
+/* line 2147, ../sass/screen.scss */
+.transition[class*="slide up"].in {
+  -webkit-animation-name: slideInY;
+  animation-name: slideInY;
+  -webkit-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
+
+/* line 2155, ../sass/screen.scss */
+.transition[class*="slide left"].in {
+  -webkit-animation-name: slideInX;
+  animation-name: slideInX;
+  -webkit-transform-origin: center right;
+  -ms-transform-origin: center right;
+  transform-origin: center right;
+}
+
+/* line 2163, ../sass/screen.scss */
+.transition[class*="slide right"].in {
+  -webkit-animation-name: slideInX;
+  animation-name: slideInX;
+  -webkit-transform-origin: center left;
+  -ms-transform-origin: center left;
+  transform-origin: center left;
+}
+
+/* line 2171, ../sass/screen.scss */
+.transition.slide.out,
+.transition[class*="slide down"].out {
+  -webkit-animation-name: slideOutY;
+  animation-name: slideOutY;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+
+/* line 2180, ../sass/screen.scss */
+.transition[class*="slide up"].out {
+  -webkit-animation-name: slideOutY;
+  animation-name: slideOutY;
+  -webkit-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
+
+/* line 2188, ../sass/screen.scss */
+.transition[class*="slide left"].out {
+  -webkit-animation-name: slideOutX;
+  animation-name: slideOutX;
+  -webkit-transform-origin: center right;
+  -ms-transform-origin: center right;
+  transform-origin: center right;
+}
+
+/* line 2196, ../sass/screen.scss */
+.transition[class*="slide right"].out {
+  -webkit-animation-name: slideOutX;
+  animation-name: slideOutX;
+  -webkit-transform-origin: center left;
+  -ms-transform-origin: center left;
+  transform-origin: center left;
+}
+
+@-webkit-keyframes slideInY {
+  0% {
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@keyframes slideInY {
+  0% {
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@-webkit-keyframes slideInX {
+  0% {
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+@keyframes slideInX {
+  0% {
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes slideOutY {
+  0% {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+@keyframes slideOutY {
+  0% {
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+@-webkit-keyframes slideOutX {
+  0% {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+}
+@keyframes slideOutX {
+  0% {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+}
+/* line 2308, ../sass/screen.scss */
+.transition.swing {
+  -webkit-animation-duration: 800ms;
+  animation-duration: 800ms;
+}
+
+/* line 2313, ../sass/screen.scss */
+.transition[class*="swing down"].in {
+  -webkit-animation-name: swingInX;
+  animation-name: swingInX;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+
+/* line 2321, ../sass/screen.scss */
+.transition[class*="swing up"].in {
+  -webkit-animation-name: swingInX;
+  animation-name: swingInX;
+  -webkit-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
+
+/* line 2329, ../sass/screen.scss */
+.transition[class*="swing left"].in {
+  -webkit-animation-name: swingInY;
+  animation-name: swingInY;
+  -webkit-transform-origin: center right;
+  -ms-transform-origin: center right;
+  transform-origin: center right;
+}
+
+/* line 2337, ../sass/screen.scss */
+.transition[class*="swing right"].in {
+  -webkit-animation-name: swingInY;
+  animation-name: swingInY;
+  -webkit-transform-origin: center left;
+  -ms-transform-origin: center left;
+  transform-origin: center left;
+}
+
+/* line 2345, ../sass/screen.scss */
+.transition.swing.out,
+.transition[class*="swing down"].out {
+  -webkit-animation-name: swingOutX;
+  animation-name: swingOutX;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+
+/* line 2354, ../sass/screen.scss */
+.transition[class*="swing up"].out {
+  -webkit-animation-name: swingOutX;
+  animation-name: swingOutX;
+  -webkit-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
+
+/* line 2362, ../sass/screen.scss */
+.transition[class*="swing left"].out {
+  -webkit-animation-name: swingOutY;
+  animation-name: swingOutY;
+  -webkit-transform-origin: center right;
+  -ms-transform-origin: center right;
+  transform-origin: center right;
+}
+
+/* line 2370, ../sass/screen.scss */
+.transition[class*="swing right"].out {
+  -webkit-animation-name: swingOutY;
+  animation-name: swingOutY;
+  -webkit-transform-origin: center left;
+  -ms-transform-origin: center left;
+  transform-origin: center left;
+}
+
+@-webkit-keyframes swingInX {
+  0% {
+    -webkit-transform: perspective(1000px) rotateX(90deg);
+    transform: perspective(1000px) rotateX(90deg);
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(1000px) rotateX(-30deg);
+    transform: perspective(1000px) rotateX(-30deg);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: perspective(1000px) rotateX(15deg);
+    transform: perspective(1000px) rotateX(15deg);
+  }
+  80% {
+    -webkit-transform: perspective(1000px) rotateX(-7.5deg);
+    transform: perspective(1000px) rotateX(-7.5deg);
+  }
+  100% {
+    -webkit-transform: perspective(1000px) rotateX(0);
+    transform: perspective(1000px) rotateX(0);
+  }
+}
+@keyframes swingInX {
+  0% {
+    -webkit-transform: perspective(1000px) rotateX(90deg);
+    transform: perspective(1000px) rotateX(90deg);
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(1000px) rotateX(-30deg);
+    transform: perspective(1000px) rotateX(-30deg);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: perspective(1000px) rotateX(15deg);
+    transform: perspective(1000px) rotateX(15deg);
+  }
+  80% {
+    -webkit-transform: perspective(1000px) rotateX(-7.5deg);
+    transform: perspective(1000px) rotateX(-7.5deg);
+  }
+  100% {
+    -webkit-transform: perspective(1000px) rotateX(0);
+    transform: perspective(1000px) rotateX(0);
+  }
+}
+@-webkit-keyframes swingInY {
+  0% {
+    -webkit-transform: perspective(1000px) rotateY(-90deg);
+    transform: perspective(1000px) rotateY(-90deg);
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(1000px) rotateY(30deg);
+    transform: perspective(1000px) rotateY(30deg);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: perspective(1000px) rotateY(-17.5deg);
+    transform: perspective(1000px) rotateY(-17.5deg);
+  }
+  80% {
+    -webkit-transform: perspective(1000px) rotateY(7.5deg);
+    transform: perspective(1000px) rotateY(7.5deg);
+  }
+  100% {
+    -webkit-transform: perspective(1000px) rotateY(0);
+    transform: perspective(1000px) rotateY(0);
+  }
+}
+@keyframes swingInY {
+  0% {
+    -webkit-transform: perspective(1000px) rotateY(-90deg);
+    transform: perspective(1000px) rotateY(-90deg);
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(1000px) rotateY(30deg);
+    transform: perspective(1000px) rotateY(30deg);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: perspective(1000px) rotateY(-17.5deg);
+    transform: perspective(1000px) rotateY(-17.5deg);
+  }
+  80% {
+    -webkit-transform: perspective(1000px) rotateY(7.5deg);
+    transform: perspective(1000px) rotateY(7.5deg);
+  }
+  100% {
+    -webkit-transform: perspective(1000px) rotateY(0);
+    transform: perspective(1000px) rotateY(0);
+  }
+}
+@-webkit-keyframes swingOutX {
+  0% {
+    -webkit-transform: perspective(1000px) rotateX(0);
+    transform: perspective(1000px) rotateX(0);
+  }
+  40% {
+    -webkit-transform: perspective(1000px) rotateX(-7.5deg);
+    transform: perspective(1000px) rotateX(-7.5deg);
+  }
+  60% {
+    -webkit-transform: perspective(1000px) rotateX(17.5deg);
+    transform: perspective(1000px) rotateX(17.5deg);
+  }
+  80% {
+    -webkit-transform: perspective(1000px) rotateX(-30deg);
+    transform: perspective(1000px) rotateX(-30deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: perspective(1000px) rotateX(90deg);
+    transform: perspective(1000px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+@keyframes swingOutX {
+  0% {
+    -webkit-transform: perspective(1000px) rotateX(0);
+    transform: perspective(1000px) rotateX(0);
+  }
+  40% {
+    -webkit-transform: perspective(1000px) rotateX(-7.5deg);
+    transform: perspective(1000px) rotateX(-7.5deg);
+  }
+  60% {
+    -webkit-transform: perspective(1000px) rotateX(17.5deg);
+    transform: perspective(1000px) rotateX(17.5deg);
+  }
+  80% {
+    -webkit-transform: perspective(1000px) rotateX(-30deg);
+    transform: perspective(1000px) rotateX(-30deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: perspective(1000px) rotateX(90deg);
+    transform: perspective(1000px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes swingOutY {
+  0% {
+    -webkit-transform: perspective(1000px) rotateY(0);
+    transform: perspective(1000px) rotateY(0);
+  }
+  40% {
+    -webkit-transform: perspective(1000px) rotateY(7.5deg);
+    transform: perspective(1000px) rotateY(7.5deg);
+  }
+  60% {
+    -webkit-transform: perspective(1000px) rotateY(-10deg);
+    transform: perspective(1000px) rotateY(-10deg);
+  }
+  80% {
+    -webkit-transform: perspective(1000px) rotateY(30deg);
+    transform: perspective(1000px) rotateY(30deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: perspective(1000px) rotateY(-90deg);
+    transform: perspective(1000px) rotateY(-90deg);
+    opacity: 0;
+  }
+}
+@keyframes swingOutY {
+  0% {
+    -webkit-transform: perspective(1000px) rotateY(0);
+    transform: perspective(1000px) rotateY(0);
+  }
+  40% {
+    -webkit-transform: perspective(1000px) rotateY(7.5deg);
+    transform: perspective(1000px) rotateY(7.5deg);
+  }
+  60% {
+    -webkit-transform: perspective(1000px) rotateY(-10deg);
+    transform: perspective(1000px) rotateY(-10deg);
+  }
+  80% {
+    -webkit-transform: perspective(1000px) rotateY(30deg);
+    transform: perspective(1000px) rotateY(30deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: perspective(1000px) rotateY(-90deg);
+    transform: perspective(1000px) rotateY(-90deg);
+    opacity: 0;
+  }
+}
+/* line 2578, ../sass/screen.scss */
+.flash.transition {
+  -webkit-animation-duration: 750ms;
+  animation-duration: 750ms;
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+
+/* line 2585, ../sass/screen.scss */
+.shake.transition {
+  -webkit-animation-duration: 750ms;
+  animation-duration: 750ms;
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
+
+/* line 2592, ../sass/screen.scss */
+.bounce.transition {
+  -webkit-animation-duration: 750ms;
+  animation-duration: 750ms;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+/* line 2599, ../sass/screen.scss */
+.tada.transition {
+  -webkit-animation-duration: 750ms;
+  animation-duration: 750ms;
+  -webkit-animation-name: tada;
+  animation-name: tada;
+}
+
+/* line 2606, ../sass/screen.scss */
+.pulse.transition {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+/* line 2613, ../sass/screen.scss */
+.jiggle.transition {
+  -webkit-animation-duration: 750ms;
+  animation-duration: 750ms;
+  -webkit-animation-name: jiggle;
+  animation-name: jiggle;
+}
+
+@-webkit-keyframes flash {
+  0%,
+     100%,
+     50% {
+    opacity: 1;
+  }
+  25%,
+     75% {
+    opacity: 0;
+  }
+}
+@keyframes flash {
+  0%,
+     100%,
+     50% {
+    opacity: 1;
+  }
+  25%,
+     75% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes shake {
+  0%,
+     100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+     30%,
+     50%,
+     70%,
+     90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+     40%,
+     60%,
+     80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+@keyframes shake {
+  0%,
+     100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+     30%,
+     50%,
+     70%,
+     90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+     40%,
+     60%,
+     80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%,
+     100%,
+     20%,
+     50%,
+     80% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+     100%,
+     20%,
+     50%,
+     80% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  10%,
+     20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg);
+  }
+  30%,
+     50%,
+     70%,
+     90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
+  40%,
+     60%,
+     80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+@keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  10%,
+     20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg);
+  }
+  30%,
+     50%,
+     70%,
+     90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
+  40%,
+     60%,
+     80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+@-webkit-keyframes pulse {
+  0%,
+     100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+}
+@keyframes pulse {
+  0%,
+     100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+}
+@-webkit-keyframes jiggle {
+  0%,
+     100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+}
+@keyframes jiggle {
+  0%,
+     100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
 }
