@@ -43,7 +43,12 @@ function drawChart(chartID,jobTitle,jobCity,jobState) {
 	*/
 	
 	// Set chart options	   
-	var options = {'title':'Typical Salary Range for this type of position','height':200};			   
+	var options = {
+	  title: 'Average Salary Ranges Based on Location for This Job Type',
+	  height: 200,
+	  legend: { position: 'none' }
+	};
+	
 	
 	// Instantiate and draw our chart, passing in some options.
 	var currChart = $('[data-job-id="' + chartID + '"] + .sr-details > div > div')[0];
@@ -55,10 +60,8 @@ function drawChart(chartID,jobTitle,jobCity,jobState) {
 function addJobDetailContainer() {
 	
 	// Adds the Details button and chart container --- called after ajax success
-	
 	$('#search-results-list li').each(function() {				
-		//console.log($(this).find('h2').text());
-		$(this).append('<div class="sr-details"><a href="#" class="btn-sr-detail">Details</a><div><p>Detail about ' + $(this).find('h2').text() + '</p><div id="chart_div"></div></div></div>');
+		$(this).append('<div class="sr-details"><a href="#" class="btn-sr-detail">Details</a><div><p><strong>Details about ' + $(this).find('h2').text() + '.</strong> This paragraph can contain general hightlights that compare this position to similar job titles nationally. The average salary chart below is one example of external API data that could be represented in this context to provide the user with valuable insight.</b></p><div id="chart_div"></div></div></div>');
 	});	
 }
 
