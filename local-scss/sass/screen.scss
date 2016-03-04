@@ -100,6 +100,10 @@ h1.title{
 	padding: 0;
 	
 }
+.fitfind{
+	display: none;
+	margin: 1em 0;
+}
 	.flex {
 		max-width: 1280px;
 		margin: 0 auto;
@@ -243,6 +247,14 @@ h1.title{
 			transform: scale(1.1);
 		}
 	}
+	.first{
+		section{
+			margin: 1em auto;
+			img{
+				margin: 0 auto;
+			}
+		}
+	}
 	.img-choice{
 		position: relative;
 		overflow: hidden;
@@ -254,8 +266,12 @@ h1.title{
 			}
 		}
 		label{
-			width: 25%;
+			max-width: 23%;
+			margin-right: 2%;
 			float: left;
+			max-height: 220px;
+			border-radius: 5px;
+			overflow: hidden;
 			img{
 				max-width: 100%;
 				max-height: 250px;
@@ -268,9 +284,11 @@ h1.title{
 					filter: grayscale(1);
 					-webkit-filter: grayscale(1);
 					opacity: 1;
+					
 				&:hover{
 					filter: grayscale(0);
 					-webkit-filter: grayscale(0);
+					transform: scale(1.1);
 				}
 			}
 		}
@@ -300,6 +318,22 @@ h1.title{
 			font-size: 1.25em;
 			font-weight: bold;
 			display: inline-block;
+		}
+		&.sides{
+			span{
+				margin: 1em;
+				float: left;
+				padding: 0;
+				width: calc(20% - 2em);
+			}
+			[type="range"] {
+				width: 60%;
+				float: left;
+			}
+			label{
+				clear: left;
+				margin: 2em 0 0;
+			}
 		}
 	}
 	

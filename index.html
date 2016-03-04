@@ -178,29 +178,41 @@
     
             <article>
 				<div class="flex">
-				<h2>Tell us About Yourself</h2>
+				<h2>Help Me Decide</h2>
 					
-					<form id="about-search" class="personal-search-form" action="/search-jobs.html" >
+					<form id="about-search" class="personal-search-form" method="get" action="/search-jobs.html" >
 						<div>
 						<div>
-							<div>
-								
+							<div class='first'>
+								<h2>Tell us About Yourself</h2>
 								<p>Don't know what you are looking for? <br />The following 5 questions will help us suggest some job matches for you.</p>
+								<section class="section-callout-img">
+									<img alt="" src="//tbcdn.talentbrew.com/company/3401/v1_0/img/quad/ico-attraction-engagement.svg" />
+								</section>
 							</div>
 							<div class="img-choice">
 								<h3>What is your ideal work attire</h3>
 								<section>
-								<label for="pj"><img src="https://www.funzee.com/wp-content/uploads/2013/07/Retro-Hooded-Adult-Onesie-01.jpg" alt="selection 1"></label>
-								<input type="radio" name="img-choice" value="pjs" id="pj" />
+									<input type="radio" name="img-choice" value="pjs" id="pj" />
+									<label for="pj">
+										<img src="https://www.funzee.com/wp-content/uploads/2013/07/Retro-Hooded-Adult-Onesie-01.jpg" alt="selection 1">
+									</label>
+									
+									<input type="radio" name="img-choice" value="jeans" id="jeans" />
+									<label for="jeans">
+										<img src="https://cdnd.lystit.com/photos/9904-2014/03/23/nudie-jeans-blue-nudie-t-shirt-one-pocket-organic-melange-product-1-18620781-2-557794060-normal.jpeg" alt="selection 2">
+									</label>
+									
+									<input type="radio" name="img-choice" value="bus-casual" id="bus-casual" />
+									<label for="bus-casual">
+										<img src="http://innovationacademy.ufl.edu/wp-content/uploads/2015/06/Business-Casual.jpg" alt="selection 1">
+									</label>
+									
+										<input type="radio" name="img-choice" value="suit" id="suit" />
+									<label for="suit">
+										<img src="http://www.mytrendyclothe.com/wp-content/uploads/2015/09/womens-suits-9.jpg" alt="selection 1">
+									</label>
 								
-								<label for="jeans"><img src="https://cdnd.lystit.com/photos/9904-2014/03/23/nudie-jeans-blue-nudie-t-shirt-one-pocket-organic-melange-product-1-18620781-2-557794060-normal.jpeg" alt="selection 2"></label>
-								<input type="radio" name="img-choice" value="jeans" id="jeans" />
-								
-								<label for="bus-casual"><img src="http://innovationacademy.ufl.edu/wp-content/uploads/2015/06/Business-Casual.jpg" alt="selection 1"></label>
-								<input type="radio" name="img-choice" value="bus-casual" id="bus-casual" />
-								
-								<label for="suit"><img src="http://www.mytrendyclothe.com/wp-content/uploads/2015/09/womens-suits-9.jpg" alt="selection 1"></label>
-								<input type="radio" name="img-choice" value="suit" />
 								</section>
 							</div>
 							
@@ -236,18 +248,21 @@
 									
 							</div>
                             
-                            <div class="range">
+                            <div class="range sides">
 								<label for="things" ><h3>Do you prefer things or people?</h3> </label>
-								<input type="range"  min="0" max="100" step="5" value="50" onchange="showValue(this)" id="things" />
-								<span>50</span>
+								<span>Things</span>
+								<input type="range"  min="0" max="100" step="50" value="50" class="sides" id="things" />
+								<span>People</span>
 								
 								<label for="ideas"><h3>Do you prefer data or ideas?</h3> </label>
-								<input type="range"  min="0" max="100" step="5" value="50" onchange="showValue(this)" id="ideas" />
-								<span>50</span>
+								<span>Data</span>
+								<input type="range"  min="0" max="100" step="50" value="50" id="ideas" />
+								<span>Ideas</span>
                                 
                                 <label for="autonomy"><h3>Do you prefer to work individually or in groups?</h3> </label>
-								<input type="range"  min="0" max="100" step="5" value="50" onchange="showValue(this)" id="autonomy" />
-								<span>50</span>
+								<span>Individually</span>
+								<input type="range"  min="0" max="100" step="50" value="50" id="autonomy" />
+								<span>Groups</span>
                                 
                                 
                                 
@@ -272,7 +287,7 @@
 										<label for="areyou4">Methodical</label>
 									</section>
                                                                                         
-									
+									<input type="hidden" id="sub" name="sub" value="submitted" />
 									<button id="fit-submit">Submit</button>
 							</div>
 							

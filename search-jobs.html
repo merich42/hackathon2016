@@ -477,7 +477,11 @@
 
     <section id="search-results" tabindex="0" data-keywords="" data-location="" data-distance="50" data-latitude="" data-longitude="" data-show-radius="False" data-total-results="52" data-total-pages="4" data-current-page="1" data-records-per-page="15" data-active-facet-id="0" data-facet-term="" data-facet-type="0" data-search-results-module-name="Search Results" data-sort-criteria="0" data-sort-direction="0" data-search-type="5" data-ajax-url="/search-jobs/results" data-server-error-message="There was an error retrieving your results. Please refresh and try again." data-keyword-type="" data-location-type="" data-location-path="" data-organization-ids="" data-selector-name="searchresults">
         <h1 role="status" class="rsts">52 Results found</h1>
-
+		<div class="fitfind">
+			<h2>We found some Jobs you may like</h2>
+			<p>
+			Thank you for answering the questions about yourself; the following jobs were found to be the best fit for your personality</p>
+		</div>
             <section id="search-results-list">
                 
             </section>
@@ -540,6 +544,12 @@
     
         <script>
 		$(document).ready(function() {
+		
+		var fitFind = getUrlParameter("sub");
+		if(fitFind.length > 0){
+			$(".fitfind").show();
+		}
+		
 			var container = $('<ul></ul>');
 			$.ajax({
 				type: "GET",
@@ -660,6 +670,21 @@
 				}
 			}
 			return myUrl;
+		}
+		
+		function getUrlParameter(sParam) {
+			var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+				sURLVariables = sPageURL.split('&'),
+				sParameterName,
+				i;
+
+			for (i = 0; i < sURLVariables.length; i++) {
+				sParameterName = sURLVariables[i].split('=');
+
+				if (sParameterName[0] === sParam) {
+					return sParameterName[1] === undefined ? true : sParameterName[1];
+				}
+			}
 		}
 		</script>
         
