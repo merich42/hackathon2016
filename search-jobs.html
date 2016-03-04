@@ -471,6 +471,7 @@
 
 
         </div>
+		<div class="cpr"></div>
     </aside>
     
 
@@ -592,20 +593,18 @@
 					.addClass('hidden')
 					.html("Compare Selected Jobs")
 					.addClass('btn');
-					$('aside').append(compareBtn);
+					$('aside .cpr').append(compareBtn);
 					$("h1.rsts").html(count+" Results Found").after("<span class='head-compare'></span");
 					
 					//DRG
 					addJobDetailContainer();
 					initBtnSRDetail();
 					
-					var comppy = $("aside .btn");
-					var initscrolltop = $("aside .btn").offset();
-					//console.log("init" + initscrolltop.top);
-					
+					var comppy = $("aside .cpr");
+					var initscrolltop = $("aside .cpr").offset();
+
 					$(document).scroll(function(e) {
-					//console.log($(this).scrollTop());
-						if($(this).scrollTop() > initscrolltop.top + 400) {
+						if($(this).scrollTop() > initscrolltop.top) {
 							comppy.css({"position" : "fixed", "top" : "10px"});
 						} else {
 							comppy.css("position", "relative");
@@ -632,6 +631,10 @@
 			} else {
 				$('aside .btn').removeClass('active');
 			}
+			var left = 3-count;
+			var howMany = $("<p></p>").addClass("howmany").text("You can select "+ left +" more jobs.");
+			$(".howmany").remove();
+			$("aside .btn").after(howMany);
 			//build url
 			var myUrl =  "compare.html";
 			$('.compare input:checkbox:checked').each(function(i){
@@ -640,7 +643,6 @@
 				}
 				var myJob = $(this).attr('id');
 				var myName = "job"+i;
-				console.log(addQSParm(myName, myJob, myUrl));
 				$('aside .btn').attr('href', addQSParm(myName, myJob, myUrl));
 			});
 			
