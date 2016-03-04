@@ -388,8 +388,11 @@
 					$('.close').click(function(e){
 						e.preventDefault();
 						var ind = $(this).parent("div").index();
-						console.log(ind);
 						$('.flex section div:nth-of-type('+ind+')').remove();
+						if($('.flex section div').length == 0){
+							$(".flex").hide();
+							$(".page-content-container").append("<h3>Oops</h3><p>Looks like you closed all your jobs, please search again to compare more jobs.</p>");
+						}
 					});
 				}
 			});

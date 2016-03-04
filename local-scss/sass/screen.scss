@@ -87,7 +87,7 @@
     transition: all 0.2s ease-in-out 0s;
     width: 100%;
 	max-width: 255px;
-}
+	}
 h1.title{
 	border-bottom: 1px dashed #b7c7d0;
 	color: #263343;
@@ -259,22 +259,33 @@ h1.title{
 			img{
 				max-width: 100%;
 				max-height: 250px;
+				border-radius: 5px;
 				-webkit-transition: all 0.2s ease-in-out;
 				-moz-transition: all 0.2s ease-in-out;
 				-o-transition: all 0.2s ease-in-out;
 				transition: all 0.2s ease-in-out;
-				&:hover{
 					background-color: rgba(38, 51, 67, 0.9);
 					filter: grayscale(1);
 					-webkit-filter: grayscale(1);
 					opacity: 1;
+				&:hover{
+					filter: grayscale(0);
+					-webkit-filter: grayscale(0);
 				}
 			}
 		}
 		input[type=radio]{
 			position:absolute;
 			left: -100px;
+			
 		}
+		input[type="radio"]:checked+label{ 
+					img {
+						filter: grayscale(0);
+						-webkit-filter: grayscale(0);
+					}
+					border: 1px solid #0895d3;
+					} 
 		
 	}
 	.range {
