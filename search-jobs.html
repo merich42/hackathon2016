@@ -591,8 +591,22 @@
 					addJobDetailContainer();
 					initBtnSRDetail();
 					
+					var comppy = $("aside .btn");
+					var initscrolltop = $("aside .btn").offset();
+					//console.log("init" + initscrolltop.top);
+					
+					$(document).scroll(function(e) {
+					//console.log($(this).scrollTop());
+						if($(this).scrollTop() > initscrolltop.top + 400) {
+							comppy.css({"position" : "fixed", "top" : "10px"});
+						} else {
+							comppy.css("position", "relative");
+						}
+					});
+					
 				}
 			});
+			
 			
 			
 		});
