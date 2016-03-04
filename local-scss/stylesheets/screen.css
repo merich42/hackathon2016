@@ -178,11 +178,17 @@ h1.title {
 }
 
 /* line 103, ../sass/screen.scss */
+.fitfind {
+  display: none;
+  margin: 1em 0;
+}
+
+/* line 107, ../sass/screen.scss */
 .flex {
   max-width: 1280px;
   margin: 0 auto;
 }
-/* line 107, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 .flex section {
   width: 100%;
   display: -webkit-box;
@@ -194,12 +200,12 @@ h1.title {
   justify-content: flex-start;
   align-items: flex-start;
 }
-/* line 118, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .flex section:first-of-type h3 {
   border-bottom: 0px dashed #b7c7d0;
   width: 25%;
 }
-/* line 124, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .flex section div {
   width: 25%;
   border-left: 1px dashed #b7c7d0;
@@ -207,16 +213,16 @@ h1.title {
   align-self: stretch;
   position: relative;
 }
-/* line 132, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 .flex section ul {
   padding: 0 0 0 1em;
   list-style: disc;
 }
-/* line 135, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .flex section ul li {
   margin: .5em 0;
 }
-/* line 139, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .flex section h1 {
   display: inline;
   color: #0895d3;
@@ -228,12 +234,12 @@ h1.title {
   align-self: stretch;
   text-transform: uppercase;
 }
-/* line 150, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 .flex section h2 {
   text-align: center;
   padding: 0 25px 0 10px;
 }
-/* line 154, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .flex section .close {
   position: absolute;
   top: 10px;
@@ -243,11 +249,11 @@ h1.title {
   height: 25px;
   overflow: hidden;
 }
-/* line 163, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 .flex section .close:hover::before, .flex section .close:hover::after {
   background: #0895d3;
 }
-/* line 168, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .flex section .close::before, .flex section .close::after {
   content: '';
   position: absolute;
@@ -258,14 +264,14 @@ h1.title {
   margin-top: -1px;
   background: #000;
 }
-/* line 178, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .flex section .close::before {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 181, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 .flex section .close::after {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -273,55 +279,55 @@ h1.title {
   transform: rotate(-45deg);
 }
 
-/* line 192, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 .home main article {
   padding: 60px 1em 0;
 }
 
-/* line 197, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 #about-search {
   border: 1px dashed #b7c7d0;
   width: 90%;
   padding: 40px 12.5%;
   display: block;
 }
-/* line 202, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 #about-search:after {
   content: '';
   display: block;
   clear: both;
 }
-/* line 207, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 #about-search > div {
   width: 100%;
 }
-/* line 209, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 #about-search > div > div {
   position: relative;
 }
-/* line 211, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 #about-search > div > div div {
   width: 100%;
   border-left: 0px;
 }
-/* line 214, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 #about-search > div > div div:not(:first-of-type) {
   display: none;
 }
-/* line 220, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 #about-search .pagination-paging {
   clear: left;
   margin: 1em 0;
 }
-/* line 223, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 #about-search .pagination-paging .prev, #about-search .pagination-paging .next {
   float: left;
 }
-/* line 227, ../sass/screen.scss */
+/* line 231, ../sass/screen.scss */
 #about-search .pagination-paging .next {
   float: right;
 }
-/* line 231, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 #about-search button {
   border: 1px dashed #ccc;
   border-radius: 5px;
@@ -331,30 +337,42 @@ h1.title {
   white-space: nowrap;
   float: right;
 }
-/* line 239, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 #about-search button:hover {
   background-color: #0895d3;
   border-style: solid;
   color: #fff;
   transform: scale(1.1);
 }
-/* line 246, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
+#about-search .first section {
+  margin: 1em auto;
+}
+/* line 253, ../sass/screen.scss */
+#about-search .first section img {
+  margin: 0 auto;
+}
+/* line 258, ../sass/screen.scss */
 #about-search .img-choice {
   position: relative;
   overflow: hidden;
 }
-/* line 250, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 #about-search .img-choice section:after {
   content: '';
   display: block;
   clear: both;
 }
-/* line 256, ../sass/screen.scss */
+/* line 268, ../sass/screen.scss */
 #about-search .img-choice label {
-  width: 25%;
+  max-width: 23%;
+  margin-right: 2%;
   float: left;
+  max-height: 220px;
+  border-radius: 5px;
+  overflow: hidden;
 }
-/* line 259, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 #about-search .img-choice label img {
   max-width: 100%;
   max-height: 250px;
@@ -368,34 +386,35 @@ h1.title {
   -webkit-filter: grayscale(1);
   opacity: 1;
 }
-/* line 271, ../sass/screen.scss */
+/* line 288, ../sass/screen.scss */
 #about-search .img-choice label img:hover {
   filter: grayscale(0);
   -webkit-filter: grayscale(0);
+  transform: scale(1.1);
 }
-/* line 277, ../sass/screen.scss */
+/* line 295, ../sass/screen.scss */
 #about-search .img-choice input[type=radio] {
   position: absolute;
   left: -100px;
 }
-/* line 282, ../sass/screen.scss */
+/* line 300, ../sass/screen.scss */
 #about-search .img-choice input[type="radio"]:checked + label {
   border: 1px solid #0895d3;
 }
-/* line 283, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 #about-search .img-choice input[type="radio"]:checked + label img {
   filter: grayscale(0);
   -webkit-filter: grayscale(0);
 }
-/* line 291, ../sass/screen.scss */
+/* line 309, ../sass/screen.scss */
 #about-search .range {
   text-align: center;
 }
-/* line 293, ../sass/screen.scss */
+/* line 311, ../sass/screen.scss */
 #about-search .range label {
   text-align: left;
 }
-/* line 296, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 #about-search .range span {
   margin: 10px auto;
   border-radius: 2px;
@@ -404,21 +423,38 @@ h1.title {
   font-weight: bold;
   display: inline-block;
 }
-/* line 306, ../sass/screen.scss */
+/* line 323, ../sass/screen.scss */
+#about-search .range.sides span {
+  margin: 1em;
+  float: left;
+  padding: 0;
+  width: calc(20% - 2em);
+}
+/* line 329, ../sass/screen.scss */
+#about-search .range.sides [type="range"] {
+  width: 60%;
+  float: left;
+}
+/* line 333, ../sass/screen.scss */
+#about-search .range.sides label {
+  clear: left;
+  margin: 2em 0 0;
+}
+/* line 340, ../sass/screen.scss */
 #about-search .toggle {
   margin: 1em 0 0;
 }
-/* line 360, ../sass/screen.scss */
+/* line 394, ../sass/screen.scss */
 #about-search [type=range] {
   -webkit-appearance: none;
   margin: 15px 0;
   width: 100%;
 }
-/* line 365, ../sass/screen.scss */
+/* line 399, ../sass/screen.scss */
 #about-search [type=range]:focus {
   outline: none;
 }
-/* line 369, ../sass/screen.scss */
+/* line 403, ../sass/screen.scss */
 #about-search [type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 10px;
@@ -429,7 +465,7 @@ h1.title {
   border: 1px solid #000;
   border-radius: 1px;
 }
-/* line 377, ../sass/screen.scss */
+/* line 411, ../sass/screen.scss */
 #about-search [type=range]::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #111, 0 0 1px #1e1e1e;
   border: 1px solid #fff;
@@ -441,11 +477,11 @@ h1.title {
   -webkit-appearance: none;
   margin-top: -11px;
 }
-/* line 383, ../sass/screen.scss */
+/* line 417, ../sass/screen.scss */
 #about-search [type=range]:focus::-webkit-slider-runnable-track {
   background: #c6d3da;
 }
-/* line 387, ../sass/screen.scss */
+/* line 421, ../sass/screen.scss */
 #about-search [type=range]::-moz-range-track {
   width: 100%;
   height: 10px;
@@ -456,7 +492,7 @@ h1.title {
   border: 1px solid #000;
   border-radius: 1px;
 }
-/* line 395, ../sass/screen.scss */
+/* line 429, ../sass/screen.scss */
 #about-search [type=range]::-moz-range-thumb {
   box-shadow: 1px 1px 1px #111, 0 0 1px #1e1e1e;
   border: 1px solid #fff;
@@ -466,7 +502,7 @@ h1.title {
   background: #0895d3;
   cursor: pointer;
 }
-/* line 399, ../sass/screen.scss */
+/* line 433, ../sass/screen.scss */
 #about-search [type=range]::-ms-track {
   width: 100%;
   height: 10px;
@@ -477,21 +513,21 @@ h1.title {
   border-width: 30px 0;
   color: transparent;
 }
-/* line 407, ../sass/screen.scss */
+/* line 441, ../sass/screen.scss */
 #about-search [type=range]::-ms-fill-lower {
   box-shadow: 0px 0px 0px #222, 0 0 0px #2f2f2f;
   background: #a8bbc6;
   border: 1px solid #000;
   border-radius: 2px;
 }
-/* line 414, ../sass/screen.scss */
+/* line 448, ../sass/screen.scss */
 #about-search [type=range]::-ms-fill-upper {
   box-shadow: 0px 0px 0px #222, 0 0 0px #2f2f2f;
   background: #b7c7d0;
   border: 1px solid #000;
   border-radius: 2px;
 }
-/* line 421, ../sass/screen.scss */
+/* line 455, ../sass/screen.scss */
 #about-search [type=range]::-ms-thumb {
   box-shadow: 1px 1px 1px #111, 0 0 1px #1e1e1e;
   border: 1px solid #fff;
@@ -501,16 +537,16 @@ h1.title {
   background: #0895d3;
   cursor: pointer;
 }
-/* line 425, ../sass/screen.scss */
+/* line 459, ../sass/screen.scss */
 #about-search [type=range]:focus::-ms-fill-lower {
   background: #b7c7d0;
 }
-/* line 429, ../sass/screen.scss */
+/* line 463, ../sass/screen.scss */
 #about-search [type=range]:focus::-ms-fill-upper {
   background: #c6d3da;
 }
 
-/* line 440, ../sass/screen.scss */
+/* line 474, ../sass/screen.scss */
 .ui.checkbox {
   position: relative;
   display: inline-block;
@@ -525,7 +561,7 @@ h1.title {
   min-width: 17px;
 }
 
-/* line 454, ../sass/screen.scss */
+/* line 488, ../sass/screen.scss */
 .ui.checkbox input[type=checkbox],
 .ui.checkbox input[type=radio] {
   cursor: pointer;
@@ -539,7 +575,7 @@ h1.title {
   height: 17px;
 }
 
-/* line 467, ../sass/screen.scss */
+/* line 501, ../sass/screen.scss */
 .ui.checkbox .box,
 .ui.checkbox label {
   cursor: auto;
@@ -550,7 +586,7 @@ h1.title {
   font-size: 1em;
 }
 
-/* line 477, ../sass/screen.scss */
+/* line 511, ../sass/screen.scss */
 .ui.checkbox .box:before,
 .ui.checkbox label:before {
   position: absolute;
@@ -566,7 +602,7 @@ h1.title {
   border: 1px solid #d4d4d5;
 }
 
-/* line 492, ../sass/screen.scss */
+/* line 526, ../sass/screen.scss */
 .ui.checkbox .box:after,
 .ui.checkbox label:after {
   position: absolute;
@@ -583,7 +619,7 @@ h1.title {
   font-family: Checkbox;
 }
 
-/* line 508, ../sass/screen.scss */
+/* line 542, ../sass/screen.scss */
 .ui.checkbox label,
 .ui.checkbox + label {
   color: rgba(0, 0, 0, 0.87);
@@ -591,81 +627,81 @@ h1.title {
   transition: color 0.1s ease;
 }
 
-/* line 515, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 .ui.checkbox + label {
   vertical-align: middle;
 }
 
-/* line 519, ../sass/screen.scss */
+/* line 553, ../sass/screen.scss */
 .ui.checkbox .box:hover::before,
 .ui.checkbox label:hover::before {
   background: #fff;
   border-color: rgba(34, 36, 38, 0.35);
 }
 
-/* line 525, ../sass/screen.scss */
+/* line 559, ../sass/screen.scss */
 .ui.checkbox label:hover,
 .ui.checkbox + label:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 530, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .ui.checkbox .box:active::before,
 .ui.checkbox label:active::before {
   background: #f9fafb;
   border-color: rgba(34, 36, 38, 0.35);
 }
 
-/* line 536, ../sass/screen.scss */
+/* line 570, ../sass/screen.scss */
 .ui.checkbox .box:active::after,
 .ui.checkbox input:active ~ label,
 .ui.checkbox label:active::after {
   color: rgba(0, 0, 0, 0.95);
 }
 
-/* line 542, ../sass/screen.scss */
+/* line 576, ../sass/screen.scss */
 .ui.checkbox input:focus ~ .box:before,
 .ui.checkbox input:focus ~ label:before {
   background: #fff;
   border-color: #96c8da;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 582, ../sass/screen.scss */
 .ui.checkbox input:focus ~ .box:after,
 .ui.checkbox input:focus ~ label,
 .ui.checkbox input:focus ~ label:after {
   color: rgba(0, 0, 0, 0.95);
 }
 
-/* line 554, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .ui.checkbox input:checked ~ .box:before,
 .ui.checkbox input:checked ~ label:before {
   background: #fff;
   border-color: rgba(34, 36, 38, 0.35);
 }
 
-/* line 560, ../sass/screen.scss */
+/* line 594, ../sass/screen.scss */
 .ui.checkbox input:checked ~ .box:after,
 .ui.checkbox input:checked ~ label:after {
   opacity: 1;
   color: rgba(0, 0, 0, 0.95);
 }
 
-/* line 566, ../sass/screen.scss */
+/* line 600, ../sass/screen.scss */
 .ui.checkbox input:indeterminate ~ .box:before,
 .ui.checkbox input:indeterminate ~ label:before {
   background: #fff;
   border-color: rgba(34, 36, 38, 0.35);
 }
 
-/* line 572, ../sass/screen.scss */
+/* line 606, ../sass/screen.scss */
 .ui.checkbox input:indeterminate ~ .box:after,
 .ui.checkbox input:indeterminate ~ label:after {
   opacity: 1;
   color: rgba(0, 0, 0, 0.95);
 }
 
-/* line 578, ../sass/screen.scss */
+/* line 612, ../sass/screen.scss */
 .ui.checkbox input:checked:focus ~ .box:before,
 .ui.checkbox input:checked:focus ~ label:before,
 .ui.checkbox input:indeterminate:focus ~ .box:before,
@@ -674,7 +710,7 @@ h1.title {
   border-color: #96c8da;
 }
 
-/* line 586, ../sass/screen.scss */
+/* line 620, ../sass/screen.scss */
 .ui.checkbox input:checked:focus ~ .box:after,
 .ui.checkbox input:checked:focus ~ label:after,
 .ui.checkbox input:indeterminate:focus ~ .box:after,
@@ -682,13 +718,13 @@ h1.title {
   color: rgba(0, 0, 0, 0.95);
 }
 
-/* line 593, ../sass/screen.scss */
+/* line 627, ../sass/screen.scss */
 .ui.read-only.checkbox,
 .ui.read-only.checkbox label {
   cursor: default;
 }
 
-/* line 598, ../sass/screen.scss */
+/* line 632, ../sass/screen.scss */
 .ui.checkbox input[disabled] ~ .box:after,
 .ui.checkbox input[disabled] ~ label,
 .ui.disabled.checkbox .box:after,
@@ -698,12 +734,12 @@ h1.title {
   color: #000;
 }
 
-/* line 607, ../sass/screen.scss */
+/* line 641, ../sass/screen.scss */
 .ui.checkbox input.hidden {
   z-index: -1;
 }
 
-/* line 611, ../sass/screen.scss */
+/* line 645, ../sass/screen.scss */
 .ui.checkbox input.hidden + label {
   cursor: pointer;
   -webkit-user-select: none;
@@ -712,18 +748,18 @@ h1.title {
   user-select: none;
 }
 
-/* line 619, ../sass/screen.scss */
+/* line 653, ../sass/screen.scss */
 .ui.radio.checkbox {
   min-height: 15px;
 }
 
-/* line 623, ../sass/screen.scss */
+/* line 657, ../sass/screen.scss */
 .ui.radio.checkbox .box,
 .ui.radio.checkbox label {
   padding-left: 1.85714em;
 }
 
-/* line 628, ../sass/screen.scss */
+/* line 662, ../sass/screen.scss */
 .ui.radio.checkbox .box:before,
 .ui.radio.checkbox label:before {
   content: '';
@@ -737,7 +773,7 @@ h1.title {
   left: 0;
 }
 
-/* line 641, ../sass/screen.scss */
+/* line 675, ../sass/screen.scss */
 .ui.radio.checkbox .box:after,
 .ui.radio.checkbox label:after {
   border: none;
@@ -754,60 +790,60 @@ h1.title {
   background-color: rgba(0, 0, 0, 0.87);
 }
 
-/* line 657, ../sass/screen.scss */
+/* line 691, ../sass/screen.scss */
 .ui.radio.checkbox input:focus ~ .box:before,
 .ui.radio.checkbox input:focus ~ label:before {
   background-color: #fff;
 }
 
-/* line 662, ../sass/screen.scss */
+/* line 696, ../sass/screen.scss */
 .ui.radio.checkbox input:focus ~ .box:after,
 .ui.radio.checkbox input:focus ~ label:after {
   background-color: rgba(0, 0, 0, 0.95);
 }
 
-/* line 667, ../sass/screen.scss */
+/* line 701, ../sass/screen.scss */
 .ui.radio.checkbox input:indeterminate ~ .box:after,
 .ui.radio.checkbox input:indeterminate ~ label:after {
   opacity: 0;
 }
 
-/* line 672, ../sass/screen.scss */
+/* line 706, ../sass/screen.scss */
 .ui.radio.checkbox input:checked ~ .box:before,
 .ui.radio.checkbox input:checked ~ label:before {
   background-color: #fff;
 }
 
-/* line 677, ../sass/screen.scss */
+/* line 711, ../sass/screen.scss */
 .ui.radio.checkbox input:checked ~ .box:after,
 .ui.radio.checkbox input:checked ~ label:after {
   background-color: rgba(0, 0, 0, 0.95);
 }
 
-/* line 682, ../sass/screen.scss */
+/* line 716, ../sass/screen.scss */
 .ui.radio.checkbox input:focus:checked ~ .box:before,
 .ui.radio.checkbox input:focus:checked ~ label:before {
   background-color: #fff;
 }
 
-/* line 687, ../sass/screen.scss */
+/* line 721, ../sass/screen.scss */
 .ui.radio.checkbox input:focus:checked ~ .box:after,
 .ui.radio.checkbox input:focus:checked ~ label:after {
   background-color: rgba(0, 0, 0, 0.95);
 }
 
-/* line 692, ../sass/screen.scss */
+/* line 726, ../sass/screen.scss */
 .ui.slider.checkbox {
   min-height: 1.25rem;
 }
 
-/* line 696, ../sass/screen.scss */
+/* line 730, ../sass/screen.scss */
 .ui.slider.checkbox input {
   width: 3.5rem;
   height: 1.25rem;
 }
 
-/* line 701, ../sass/screen.scss */
+/* line 735, ../sass/screen.scss */
 .ui.slider.checkbox .box,
 .ui.slider.checkbox label {
   padding-left: 4.5rem;
@@ -815,7 +851,7 @@ h1.title {
   color: rgba(0, 0, 0, 0.4);
 }
 
-/* line 708, ../sass/screen.scss */
+/* line 742, ../sass/screen.scss */
 .ui.slider.checkbox .box:before,
 .ui.slider.checkbox label:before {
   display: block;
@@ -836,7 +872,7 @@ h1.title {
   transition: background 0.3s ease;
 }
 
-/* line 728, ../sass/screen.scss */
+/* line 762, ../sass/screen.scss */
 .ui.slider.checkbox .box:after,
 .ui.slider.checkbox label:after {
   background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05)) #fff;
@@ -859,67 +895,67 @@ h1.title {
   transition: left 0.3s ease;
 }
 
-/* line 750, ../sass/screen.scss */
+/* line 784, ../sass/screen.scss */
 .ui.slider.checkbox input:focus ~ .box:before,
 .ui.slider.checkbox input:focus ~ label:before {
   background-color: rgba(0, 0, 0, 0.15);
   border: none;
 }
 
-/* line 756, ../sass/screen.scss */
+/* line 790, ../sass/screen.scss */
 .ui.slider.checkbox .box:hover,
 .ui.slider.checkbox label:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 761, ../sass/screen.scss */
+/* line 795, ../sass/screen.scss */
 .ui.slider.checkbox .box:hover::before,
 .ui.slider.checkbox label:hover::before {
   background: rgba(0, 0, 0, 0.15);
 }
 
-/* line 766, ../sass/screen.scss */
+/* line 800, ../sass/screen.scss */
 .ui.slider.checkbox input:checked ~ .box,
 .ui.slider.checkbox input:checked ~ label {
   color: rgba(0, 0, 0, 0.95) !important;
 }
 
-/* line 771, ../sass/screen.scss */
+/* line 805, ../sass/screen.scss */
 .ui.slider.checkbox input:checked ~ .box:before,
 .ui.slider.checkbox input:checked ~ label:before {
   background-color: #545454 !important;
 }
 
-/* line 776, ../sass/screen.scss */
+/* line 810, ../sass/screen.scss */
 .ui.slider.checkbox input:checked ~ .box:after,
 .ui.slider.checkbox input:checked ~ label:after {
   left: 2rem;
 }
 
-/* line 781, ../sass/screen.scss */
+/* line 815, ../sass/screen.scss */
 .ui.slider.checkbox input:focus:checked ~ .box,
 .ui.slider.checkbox input:focus:checked ~ label {
   color: rgba(0, 0, 0, 0.95) !important;
 }
 
-/* line 786, ../sass/screen.scss */
+/* line 820, ../sass/screen.scss */
 .ui.slider.checkbox input:focus:checked ~ .box:before,
 .ui.slider.checkbox input:focus:checked ~ label:before {
   background-color: #000 !important;
 }
 
-/* line 791, ../sass/screen.scss */
+/* line 825, ../sass/screen.scss */
 .ui.toggle.checkbox {
   min-height: 1.5rem;
 }
 
-/* line 795, ../sass/screen.scss */
+/* line 829, ../sass/screen.scss */
 .ui.toggle.checkbox input {
   width: 3.5rem;
   height: 1.5rem;
 }
 
-/* line 800, ../sass/screen.scss */
+/* line 834, ../sass/screen.scss */
 .ui.toggle.checkbox .box,
 .ui.toggle.checkbox label {
   min-height: 1.5rem;
@@ -927,12 +963,12 @@ h1.title {
   color: rgba(0, 0, 0, 0.87);
 }
 
-/* line 807, ../sass/screen.scss */
+/* line 841, ../sass/screen.scss */
 .ui.toggle.checkbox label {
   padding-top: 0.15em;
 }
 
-/* line 811, ../sass/screen.scss */
+/* line 845, ../sass/screen.scss */
 .ui.toggle.checkbox .box:before,
 .ui.toggle.checkbox label:before {
   display: block;
@@ -950,7 +986,7 @@ h1.title {
   border-radius: 500rem;
 }
 
-/* line 828, ../sass/screen.scss */
+/* line 862, ../sass/screen.scss */
 .ui.toggle.checkbox .box:after,
 .ui.toggle.checkbox label:after {
   background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05)) #fff;
@@ -970,13 +1006,13 @@ h1.title {
   transition: background 0.3s ease, left 0.3s ease;
 }
 
-/* line 847, ../sass/screen.scss */
+/* line 881, ../sass/screen.scss */
 .ui.toggle.checkbox input ~ .box:after,
 .ui.toggle.checkbox input ~ label:after {
   left: -0.05rem;
 }
 
-/* line 852, ../sass/screen.scss */
+/* line 886, ../sass/screen.scss */
 .ui.toggle.checkbox .box:hover::before,
 .ui.toggle.checkbox input:focus ~ .box:before,
 .ui.toggle.checkbox input:focus ~ label:before,
@@ -985,43 +1021,43 @@ h1.title {
   border: none;
 }
 
-/* line 860, ../sass/screen.scss */
+/* line 894, ../sass/screen.scss */
 .ui.toggle.checkbox input:checked ~ .box,
 .ui.toggle.checkbox input:checked ~ label {
   color: rgba(0, 0, 0, 0.95) !important;
 }
 
-/* line 865, ../sass/screen.scss */
+/* line 899, ../sass/screen.scss */
 .ui.toggle.checkbox input:checked ~ .box:before,
 .ui.toggle.checkbox input:checked ~ label:before {
   background-color: #2185d0 !important;
 }
 
-/* line 870, ../sass/screen.scss */
+/* line 904, ../sass/screen.scss */
 .ui.toggle.checkbox input:checked ~ .box:after,
 .ui.toggle.checkbox input:checked ~ label:after {
   left: 2.15rem;
 }
 
-/* line 875, ../sass/screen.scss */
+/* line 909, ../sass/screen.scss */
 .ui.toggle.checkbox input:focus:checked ~ .box,
 .ui.toggle.checkbox input:focus:checked ~ label {
   color: rgba(0, 0, 0, 0.95) !important;
 }
 
-/* line 880, ../sass/screen.scss */
+/* line 914, ../sass/screen.scss */
 .ui.toggle.checkbox input:focus:checked ~ .box:before,
 .ui.toggle.checkbox input:focus:checked ~ label:before {
   background-color: #0d71bb !important;
 }
 
-/* line 885, ../sass/screen.scss */
+/* line 919, ../sass/screen.scss */
 .ui.fitted.checkbox .box,
 .ui.fitted.checkbox label {
   padding-left: 0 !important;
 }
 
-/* line 890, ../sass/screen.scss */
+/* line 924, ../sass/screen.scss */
 .ui.fitted.slider.checkbox,
 .ui.fitted.toggle.checkbox {
   width: 3.5rem;
@@ -1031,20 +1067,20 @@ h1.title {
   font-family: Checkbox;
   src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SBD8AAAC8AAAAYGNtYXAYVtCJAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5Zn4huwUAAAF4AAABYGhlYWQGPe1ZAAAC2AAAADZoaGVhB30DyAAAAxAAAAAkaG10eBBKAEUAAAM0AAAAHGxvY2EAmgESAAADUAAAABBtYXhwAAkALwAAA2AAAAAgbmFtZSC8IugAAAOAAAABknBvc3QAAwAAAAAFFAAAACAAAwMTAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADoAgPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg6AL//f//AAAAAAAg6AD//f//AAH/4xgEAAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAEUAUQO7AvgAGgAAARQHAQYjIicBJjU0PwE2MzIfAQE2MzIfARYVA7sQ/hQQFhcQ/uMQEE4QFxcQqAF2EBcXEE4QAnMWEP4UEBABHRAXFhBOEBCoAXcQEE4QFwAAAAABAAABbgMlAkkAFAAAARUUBwYjISInJj0BNDc2MyEyFxYVAyUQEBf9SRcQEBAQFwK3FxAQAhJtFxAQEBAXbRcQEBAQFwAAAAABAAAASQMlA24ALAAAARUUBwYrARUUBwYrASInJj0BIyInJj0BNDc2OwE1NDc2OwEyFxYdATMyFxYVAyUQEBfuEBAXbhYQEO4XEBAQEBfuEBAWbhcQEO4XEBACEm0XEBDuFxAQEBAX7hAQF20XEBDuFxAQEBAX7hAQFwAAAQAAAAIAAHRSzT9fDzz1AAsEAAAAAADRsdR3AAAAANGx1HcAAAAAA7sDbgAAAAgAAgAAAAAAAAABAAADwP/AAAAEAAAAAAADuwABAAAAAAAAAAAAAAAAAAAABwQAAAAAAAAAAAAAAAIAAAAEAABFAyUAAAMlAAAAAAAAAAoAFAAeAE4AcgCwAAEAAAAHAC0AAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAIAAAAAQAAAAAAAgAHAGkAAQAAAAAAAwAIADkAAQAAAAAABAAIAH4AAQAAAAAABQALABgAAQAAAAAABgAIAFEAAQAAAAAACgAaAJYAAwABBAkAAQAQAAgAAwABBAkAAgAOAHAAAwABBAkAAwAQAEEAAwABBAkABAAQAIYAAwABBAkABQAWACMAAwABBAkABgAQAFkAAwABBAkACgA0ALBDaGVja2JveABDAGgAZQBjAGsAYgBvAHhWZXJzaW9uIDIuMABWAGUAcgBzAGkAbwBuACAAMgAuADBDaGVja2JveABDAGgAZQBjAGsAYgBvAHhDaGVja2JveABDAGgAZQBjAGsAYgBvAHhSZWd1bGFyAFIAZQBnAHUAbABhAHJDaGVja2JveABDAGgAZQBjAGsAYgBvAHhGb250IGdlbmVyYXRlZCBieSBJY29Nb29uLgBGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABJAGMAbwBNAG8AbwBuAC4AAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format("truetype");
 }
-/* line 900, ../sass/screen.scss */
+/* line 934, ../sass/screen.scss */
 .ui.checkbox input:checked ~ .box:after,
 .ui.checkbox input:checked ~ label:after {
   content: "";
 }
 
-/* line 905, ../sass/screen.scss */
+/* line 939, ../sass/screen.scss */
 .ui.checkbox input:indeterminate ~ .box:after,
 .ui.checkbox input:indeterminate ~ label:after {
   font-size: 12px;
   content: "";
 }
 
-/* line 912, ../sass/screen.scss */
+/* line 946, ../sass/screen.scss */
 .transition {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
@@ -1056,64 +1092,64 @@ h1.title {
   animation-fill-mode: both;
 }
 
-/* line 923, ../sass/screen.scss */
+/* line 957, ../sass/screen.scss */
 .animating.transition {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   visibility: visible !important;
 }
 
-/* line 929, ../sass/screen.scss */
+/* line 963, ../sass/screen.scss */
 .loading.transition {
   position: absolute;
   top: -99999px;
   left: -99999px;
 }
 
-/* line 935, ../sass/screen.scss */
+/* line 969, ../sass/screen.scss */
 .hidden.transition {
   display: none;
   visibility: hidden;
 }
 
-/* line 940, ../sass/screen.scss */
+/* line 974, ../sass/screen.scss */
 .visible.transition {
   display: block !important;
   visibility: visible !important;
 }
 
-/* line 945, ../sass/screen.scss */
+/* line 979, ../sass/screen.scss */
 .disabled.transition {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
 
-/* line 950, ../sass/screen.scss */
+/* line 984, ../sass/screen.scss */
 .looping.transition {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-/* line 955, ../sass/screen.scss */
+/* line 989, ../sass/screen.scss */
 .transition.browse {
   -webkit-animation-duration: 500ms;
   animation-duration: 500ms;
 }
 
-/* line 960, ../sass/screen.scss */
+/* line 994, ../sass/screen.scss */
 .transition.browse.in {
   -webkit-animation-name: browseIn;
   animation-name: browseIn;
 }
 
-/* line 965, ../sass/screen.scss */
+/* line 999, ../sass/screen.scss */
 .transition.browse.left.out,
 .transition.browse.out {
   -webkit-animation-name: browseOutLeft;
   animation-name: browseOutLeft;
 }
 
-/* line 971, ../sass/screen.scss */
+/* line 1005, ../sass/screen.scss */
 .transition.browse.right.out {
   -webkit-animation-name: browseOutRight;
   animation-name: browseOutRight;
@@ -1251,7 +1287,7 @@ h1.title {
     opacity: 0;
   }
 }
-/* line 1114, ../sass/screen.scss */
+/* line 1148, ../sass/screen.scss */
 .drop.transition {
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
@@ -1262,13 +1298,13 @@ h1.title {
   animation-timing-function: cubic-bezier(0.34, 1.61, 0.7, 1);
 }
 
-/* line 1124, ../sass/screen.scss */
+/* line 1158, ../sass/screen.scss */
 .drop.transition.in {
   -webkit-animation-name: dropIn;
   animation-name: dropIn;
 }
 
-/* line 1129, ../sass/screen.scss */
+/* line 1163, ../sass/screen.scss */
 .drop.transition.out {
   -webkit-animation-name: dropOut;
   animation-name: dropOut;
@@ -1322,61 +1358,61 @@ h1.title {
     transform: scale(0);
   }
 }
-/* line 1186, ../sass/screen.scss */
+/* line 1220, ../sass/screen.scss */
 .transition.fade.in {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
 
-/* line 1191, ../sass/screen.scss */
+/* line 1225, ../sass/screen.scss */
 .transition[class*="fade up"].in {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
 
-/* line 1196, ../sass/screen.scss */
+/* line 1230, ../sass/screen.scss */
 .transition[class*="fade down"].in {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
 }
 
-/* line 1201, ../sass/screen.scss */
+/* line 1235, ../sass/screen.scss */
 .transition[class*="fade left"].in {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
 
-/* line 1206, ../sass/screen.scss */
+/* line 1240, ../sass/screen.scss */
 .transition[class*="fade right"].in {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
 
-/* line 1211, ../sass/screen.scss */
+/* line 1245, ../sass/screen.scss */
 .transition.fade.out {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
 }
 
-/* line 1216, ../sass/screen.scss */
+/* line 1250, ../sass/screen.scss */
 .transition[class*="fade up"].out {
   -webkit-animation-name: fadeOutUp;
   animation-name: fadeOutUp;
 }
 
-/* line 1221, ../sass/screen.scss */
+/* line 1255, ../sass/screen.scss */
 .transition[class*="fade down"].out {
   -webkit-animation-name: fadeOutDown;
   animation-name: fadeOutDown;
 }
 
-/* line 1226, ../sass/screen.scss */
+/* line 1260, ../sass/screen.scss */
 .transition[class*="fade left"].out {
   -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
 }
 
-/* line 1231, ../sass/screen.scss */
+/* line 1265, ../sass/screen.scss */
 .transition[class*="fade right"].out {
   -webkit-animation-name: fadeOutRight;
   animation-name: fadeOutRight;
@@ -1606,32 +1642,32 @@ h1.title {
     transform: translateX(-5%);
   }
 }
-/* line 1480, ../sass/screen.scss */
+/* line 1514, ../sass/screen.scss */
 .flip.transition.in,
 .flip.transition.out {
   -webkit-animation-duration: 600ms;
   animation-duration: 600ms;
 }
 
-/* line 1486, ../sass/screen.scss */
+/* line 1520, ../sass/screen.scss */
 .horizontal.flip.transition.in {
   -webkit-animation-name: horizontalFlipIn;
   animation-name: horizontalFlipIn;
 }
 
-/* line 1491, ../sass/screen.scss */
+/* line 1525, ../sass/screen.scss */
 .horizontal.flip.transition.out {
   -webkit-animation-name: horizontalFlipOut;
   animation-name: horizontalFlipOut;
 }
 
-/* line 1496, ../sass/screen.scss */
+/* line 1530, ../sass/screen.scss */
 .vertical.flip.transition.in {
   -webkit-animation-name: verticalFlipIn;
   animation-name: verticalFlipIn;
 }
 
-/* line 1501, ../sass/screen.scss */
+/* line 1535, ../sass/screen.scss */
 .vertical.flip.transition.out {
   -webkit-animation-name: verticalFlipOut;
   animation-name: verticalFlipOut;
@@ -1733,13 +1769,13 @@ h1.title {
     opacity: 0;
   }
 }
-/* line 1610, ../sass/screen.scss */
+/* line 1644, ../sass/screen.scss */
 .scale.transition.in {
   -webkit-animation-name: scaleIn;
   animation-name: scaleIn;
 }
 
-/* line 1615, ../sass/screen.scss */
+/* line 1649, ../sass/screen.scss */
 .scale.transition.out {
   -webkit-animation-name: scaleOut;
   animation-name: scaleOut;
@@ -1793,7 +1829,7 @@ h1.title {
     transform: scale(0.9);
   }
 }
-/* line 1672, ../sass/screen.scss */
+/* line 1706, ../sass/screen.scss */
 .transition.fly {
   -webkit-animation-duration: .6s;
   animation-duration: .6s;
@@ -1801,61 +1837,61 @@ h1.title {
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-/* line 1679, ../sass/screen.scss */
+/* line 1713, ../sass/screen.scss */
 .transition.fly.in {
   -webkit-animation-name: flyIn;
   animation-name: flyIn;
 }
 
-/* line 1684, ../sass/screen.scss */
+/* line 1718, ../sass/screen.scss */
 .transition[class*="fly up"].in {
   -webkit-animation-name: flyInUp;
   animation-name: flyInUp;
 }
 
-/* line 1689, ../sass/screen.scss */
+/* line 1723, ../sass/screen.scss */
 .transition[class*="fly down"].in {
   -webkit-animation-name: flyInDown;
   animation-name: flyInDown;
 }
 
-/* line 1694, ../sass/screen.scss */
+/* line 1728, ../sass/screen.scss */
 .transition[class*="fly left"].in {
   -webkit-animation-name: flyInLeft;
   animation-name: flyInLeft;
 }
 
-/* line 1699, ../sass/screen.scss */
+/* line 1733, ../sass/screen.scss */
 .transition[class*="fly right"].in {
   -webkit-animation-name: flyInRight;
   animation-name: flyInRight;
 }
 
-/* line 1704, ../sass/screen.scss */
+/* line 1738, ../sass/screen.scss */
 .transition.fly.out {
   -webkit-animation-name: flyOut;
   animation-name: flyOut;
 }
 
-/* line 1709, ../sass/screen.scss */
+/* line 1743, ../sass/screen.scss */
 .transition[class*="fly up"].out {
   -webkit-animation-name: flyOutUp;
   animation-name: flyOutUp;
 }
 
-/* line 1714, ../sass/screen.scss */
+/* line 1748, ../sass/screen.scss */
 .transition[class*="fly down"].out {
   -webkit-animation-name: flyOutDown;
   animation-name: flyOutDown;
 }
 
-/* line 1719, ../sass/screen.scss */
+/* line 1753, ../sass/screen.scss */
 .transition[class*="fly left"].out {
   -webkit-animation-name: flyOutLeft;
   animation-name: flyOutLeft;
 }
 
-/* line 1724, ../sass/screen.scss */
+/* line 1758, ../sass/screen.scss */
 .transition[class*="fly right"].out {
   -webkit-animation-name: flyOutRight;
   animation-name: flyOutRight;
@@ -2261,7 +2297,7 @@ h1.title {
     transform: translate3d(2000px, 0, 0);
   }
 }
-/* line 2149, ../sass/screen.scss */
+/* line 2183, ../sass/screen.scss */
 .transition.slide.in,
 .transition[class*="slide down"].in {
   -webkit-animation-name: slideInY;
@@ -2271,7 +2307,7 @@ h1.title {
   transform-origin: top center;
 }
 
-/* line 2158, ../sass/screen.scss */
+/* line 2192, ../sass/screen.scss */
 .transition[class*="slide up"].in {
   -webkit-animation-name: slideInY;
   animation-name: slideInY;
@@ -2280,7 +2316,7 @@ h1.title {
   transform-origin: bottom center;
 }
 
-/* line 2166, ../sass/screen.scss */
+/* line 2200, ../sass/screen.scss */
 .transition[class*="slide left"].in {
   -webkit-animation-name: slideInX;
   animation-name: slideInX;
@@ -2289,7 +2325,7 @@ h1.title {
   transform-origin: center right;
 }
 
-/* line 2174, ../sass/screen.scss */
+/* line 2208, ../sass/screen.scss */
 .transition[class*="slide right"].in {
   -webkit-animation-name: slideInX;
   animation-name: slideInX;
@@ -2298,7 +2334,7 @@ h1.title {
   transform-origin: center left;
 }
 
-/* line 2182, ../sass/screen.scss */
+/* line 2216, ../sass/screen.scss */
 .transition.slide.out,
 .transition[class*="slide down"].out {
   -webkit-animation-name: slideOutY;
@@ -2308,7 +2344,7 @@ h1.title {
   transform-origin: top center;
 }
 
-/* line 2191, ../sass/screen.scss */
+/* line 2225, ../sass/screen.scss */
 .transition[class*="slide up"].out {
   -webkit-animation-name: slideOutY;
   animation-name: slideOutY;
@@ -2317,7 +2353,7 @@ h1.title {
   transform-origin: bottom center;
 }
 
-/* line 2199, ../sass/screen.scss */
+/* line 2233, ../sass/screen.scss */
 .transition[class*="slide left"].out {
   -webkit-animation-name: slideOutX;
   animation-name: slideOutX;
@@ -2326,7 +2362,7 @@ h1.title {
   transform-origin: center right;
 }
 
-/* line 2207, ../sass/screen.scss */
+/* line 2241, ../sass/screen.scss */
 .transition[class*="slide right"].out {
   -webkit-animation-name: slideOutX;
   animation-name: slideOutX;
@@ -2431,13 +2467,13 @@ h1.title {
     transform: scaleX(0);
   }
 }
-/* line 2319, ../sass/screen.scss */
+/* line 2353, ../sass/screen.scss */
 .transition.swing {
   -webkit-animation-duration: 800ms;
   animation-duration: 800ms;
 }
 
-/* line 2324, ../sass/screen.scss */
+/* line 2358, ../sass/screen.scss */
 .transition[class*="swing down"].in {
   -webkit-animation-name: swingInX;
   animation-name: swingInX;
@@ -2446,7 +2482,7 @@ h1.title {
   transform-origin: top center;
 }
 
-/* line 2332, ../sass/screen.scss */
+/* line 2366, ../sass/screen.scss */
 .transition[class*="swing up"].in {
   -webkit-animation-name: swingInX;
   animation-name: swingInX;
@@ -2455,7 +2491,7 @@ h1.title {
   transform-origin: bottom center;
 }
 
-/* line 2340, ../sass/screen.scss */
+/* line 2374, ../sass/screen.scss */
 .transition[class*="swing left"].in {
   -webkit-animation-name: swingInY;
   animation-name: swingInY;
@@ -2464,7 +2500,7 @@ h1.title {
   transform-origin: center right;
 }
 
-/* line 2348, ../sass/screen.scss */
+/* line 2382, ../sass/screen.scss */
 .transition[class*="swing right"].in {
   -webkit-animation-name: swingInY;
   animation-name: swingInY;
@@ -2473,7 +2509,7 @@ h1.title {
   transform-origin: center left;
 }
 
-/* line 2356, ../sass/screen.scss */
+/* line 2390, ../sass/screen.scss */
 .transition.swing.out,
 .transition[class*="swing down"].out {
   -webkit-animation-name: swingOutX;
@@ -2483,7 +2519,7 @@ h1.title {
   transform-origin: top center;
 }
 
-/* line 2365, ../sass/screen.scss */
+/* line 2399, ../sass/screen.scss */
 .transition[class*="swing up"].out {
   -webkit-animation-name: swingOutX;
   animation-name: swingOutX;
@@ -2492,7 +2528,7 @@ h1.title {
   transform-origin: bottom center;
 }
 
-/* line 2373, ../sass/screen.scss */
+/* line 2407, ../sass/screen.scss */
 .transition[class*="swing left"].out {
   -webkit-animation-name: swingOutY;
   animation-name: swingOutY;
@@ -2501,7 +2537,7 @@ h1.title {
   transform-origin: center right;
 }
 
-/* line 2381, ../sass/screen.scss */
+/* line 2415, ../sass/screen.scss */
 .transition[class*="swing right"].out {
   -webkit-animation-name: swingOutY;
   animation-name: swingOutY;
@@ -2702,7 +2738,7 @@ h1.title {
     opacity: 0;
   }
 }
-/* line 2589, ../sass/screen.scss */
+/* line 2623, ../sass/screen.scss */
 .flash.transition {
   -webkit-animation-duration: 750ms;
   animation-duration: 750ms;
@@ -2710,7 +2746,7 @@ h1.title {
   animation-name: flash;
 }
 
-/* line 2596, ../sass/screen.scss */
+/* line 2630, ../sass/screen.scss */
 .shake.transition {
   -webkit-animation-duration: 750ms;
   animation-duration: 750ms;
@@ -2718,7 +2754,7 @@ h1.title {
   animation-name: shake;
 }
 
-/* line 2603, ../sass/screen.scss */
+/* line 2637, ../sass/screen.scss */
 .bounce.transition {
   -webkit-animation-duration: 750ms;
   animation-duration: 750ms;
@@ -2726,7 +2762,7 @@ h1.title {
   animation-name: bounce;
 }
 
-/* line 2610, ../sass/screen.scss */
+/* line 2644, ../sass/screen.scss */
 .tada.transition {
   -webkit-animation-duration: 750ms;
   animation-duration: 750ms;
@@ -2734,7 +2770,7 @@ h1.title {
   animation-name: tada;
 }
 
-/* line 2617, ../sass/screen.scss */
+/* line 2651, ../sass/screen.scss */
 .pulse.transition {
   -webkit-animation-duration: 500ms;
   animation-duration: 500ms;
@@ -2742,7 +2778,7 @@ h1.title {
   animation-name: pulse;
 }
 
-/* line 2624, ../sass/screen.scss */
+/* line 2658, ../sass/screen.scss */
 .jiggle.transition {
   -webkit-animation-duration: 750ms;
   animation-duration: 750ms;
