@@ -61,18 +61,23 @@
 /* line 58, ../sass/drg.scss */
 .sr-details p {
   margin: 0 0 .5em 0;
+  font-size: 90%;
+}
+/* line 61, ../sass/drg.scss */
+.sr-details p strong {
+  font-weight: bold;
 }
 
-/* line 63, ../sass/drg.scss */
+/* line 67, ../sass/drg.scss */
 #search-results-list > ul .sr-details a {
   padding: 0.5em 1em;
 }
-/* line 65, ../sass/drg.scss */
+/* line 69, ../sass/drg.scss */
 #search-results-list > ul .sr-details a:hover {
   background: none repeat scroll 0 0 #ebeef0;
 }
 
-/* line 71, ../sass/drg.scss */
+/* line 75, ../sass/drg.scss */
 #search-results-list ul li {
   padding-bottom: 4px;
 }
