@@ -544,9 +544,9 @@
     
         <script>
 		$(document).ready(function() {
-		
-		var fitFind = getUrlParameter("sub");
-		if(fitFind.length > 0){
+		var fitFind = "";
+		fitFind = getUrlParameter("sub");
+		if(fitFind == "sub"){
 			$(".fitfind").show();
 		}
 		
