@@ -204,39 +204,38 @@
 								</section>
 							</div>
 							
-							<div>
-								<label for="env">What is your ideal work attire? </label>
-								<select id="env">
-									<option>PJs and and laptop</option>
-									<option>Jeans and a T-shirt</option>
-									<option>business casual</option>
-									<option>Suit and a tie</option>
-								</select>
-							</div>
-							
-							<div>
-								<label for="env2">What is your ideal work attire? </label>
-								<select id="env2">
-									<option>PJs and and laptop</option>
-									<option>Jeans and a T-shirt</option>
-									<option>business casual</option>
-									<option>Suit and a tie</option>
-								</select>
-							</div>
-							
-							<div>
-								<label for="env3">What is your ideal work attire? </label>
-								<select id="env3">
-									<option>PJs and and laptop</option>
-									<option>Jeans and a T-shirt</option>
-									<option>business casual</option>
-									<option>Suit and a tie</option>
-								</select>
-							</div>
-							<div>
+							<div class="range">
+								<label for="range" ><h3>How important is teleworking?</h3> </label>
+								<input type="range"  min="0" max="100" step="5" value="50" onchange="showValue(this)" id="range" />
+								<span>50</span>
 								
-								<button id="search-submit-cf0cfb82ed">Submit</button>
+								<label for="flx" ><h3>How important a flexable work schedule?</h3> </label>
+								<input type="range"  min="0" max="100" step="5" value="50" onchange="showValue(this)" id="flx" />
+								<span>50</span>
 							</div>
+							
+							<div>
+								<h3>Tell us what is important</h3>
+									<section class="ui toggle checkbox checked">
+										<input class="hidden" type="checkbox" name="gift" id="gift" tabindex="0">
+										<label for="gift">I like perks like free coffee and lunch.</label>
+									</section>
+									<section class="ui toggle checkbox checked">
+										<input class="hidden" type="checkbox" name="gift2" id="gift2" tabindex="0">
+										<label for="gift2">I like working in a open office plan.</label>
+									</section>
+									<section class="ui toggle checkbox checked">
+										<input class="hidden" type="checkbox" name="gift3" id="gift3" tabindex="0">
+										<label for="gift3">I enjoy hanging out with co-workers outside the office.</label>
+									</section>
+									<section class="ui toggle checkbox checked">
+										<input class="hidden" type="checkbox" name="gift4" id="gift4" tabindex="0">
+										<label for="gift4">I like having games and toys in the office.</label>
+									</section>
+									
+									<button id="fit-submit">Submit</button>
+							</div>
+							
 						</div>
 						</div>
 					</form>
@@ -311,11 +310,19 @@
 					e.preventDefault();
 					$(this).parent().parent().fadeOut( "fast", function() {$(this).prev().fadeIn()});
 				});
-			var cont = $("<div></div>").addClass("pagination");
+			var cont = $("<div></div>").addClass("pagination-paging");
 			$("#about-search div > div > div").append(cont);
-			$("#about-search div > div > div:not(:first-of-type) .pagination").append(prevBtn);
-			$("#about-search div > div > div:not(:last-of-type) .pagination").append(nextBtn);
+			$("#about-search div > div > div:not(:first-of-type) .pagination-paging").append(prevBtn);
+			$("#about-search div > div > div:not(:last-of-type) .pagination-paging").append(nextBtn);
+			var btn = $("#fit-submit");
+			$("#fit-submit").next().append(btn);
 		});
+		
+		function showValue(inp)
+		{
+			var newValue = $(inp).val();
+			$(inp).next("span").html(newValue);
+		}
 	</script>
     
 
