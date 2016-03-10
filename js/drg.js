@@ -19,7 +19,7 @@ function drawChart(chartID,jobTitle,jobCity,jobState) {
 	//https://developers.google.com/chart/interactive/docs/reference#dataparam
 	
 	var params = {chartID:chartID,jobTitle:jobTitle,jobCity:jobCity,jobState:jobState};
-	var apiDataUrl = "/data/chartdata.json?" + jQuery.param( params );
+	var apiDataUrl = "data/chartdata.json?" + jQuery.param( params );
 	//console.log(apiDataUrl);
 	
 	var jsonData = $.ajax({

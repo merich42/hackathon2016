@@ -33,7 +33,7 @@
 }
 /* line 34, ../sass/drg.scss */
 .sr-details > a:after {
-  background: url("//tbcdn.talentbrew.com/company/3401/v1_0/img/button/filter-arrows.png") repeat scroll 31px 0 transparent;
+  background: url("http://tbcdn.talentbrew.com/company/3401/v1_0/img/button/filter-arrows.png") repeat scroll 31px 0 transparent;
   content: " ";
   float: right;
   height: 11px;
